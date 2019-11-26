@@ -62,7 +62,7 @@ function CarouselSection() {
                       <img src={item.src} alt={item.altText} />
                       <div className="overlay"></div>
                       </div>
-                      {/* <div class="rank">{index+1}</div> */}
+                      <div class="rank">{index+1}</div>
                       <div className="content-area d-flex flex-row justify-content-start">
                         <div className="carousel-caption flex-column d-flex align-items-start">
                          

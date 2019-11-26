@@ -5,6 +5,8 @@ import CountdownList from '../components/CountDownList/CountDownList';
 import {countDownList} from '../common/constant/countDownList'; 
 import List from '../components/cardLists/List';
 import {trending} from '../common/constant/topTrending';
+import {categories} from '../common/constant/categories';
+import CategoryList from '../components/category/ListCategory';
 function Home(){
     return (
         <section id="home">
@@ -12,6 +14,7 @@ function Home(){
             <Container>
                 <CountdownList title="SẮP PHÁT PHÁT HÀNH" listItems={countDownList} />
                 <List title="MỚI CẬP NHẬT" listItems={trending}></List>
+                <CategoryList title="Thể loại" listItems={categories}></CategoryList>
             </Container>
         </section>
     );

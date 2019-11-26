@@ -22,7 +22,7 @@ import shadows from '@material-ui/core/styles/shadows';
 const useStyles = makeStyles(theme => (
   {
   header:{
-    backgroundColor:'transparent',
+    // backgroundColor:'transparent',
     boxShadow:'none'
   },
   grow: {
@@ -178,8 +178,8 @@ export default function PrimarySearchAppBar() {
 
   return (
       <div className={classes.grow} id="header">
-      <AppBar position="fixed" className={`${isTransparent? '': 'app-bar-color'}${classes.header}`} >
-        <Container>
+      <AppBar position="fixed" className={`${classes.header}`} >
+        {/* <Container> */}
         <Toolbar>
           <img src={logo} className="logo" alt=""></img>
           {/* <Typography className={classes.title} variant="h6" noWrap>
@@ -231,7 +231,7 @@ export default function PrimarySearchAppBar() {
           </div>
           {/* </div> */}
         </Toolbar>
-        </Container>
+        {/* </Container> */}
         
       </AppBar>
       {renderMobileMenu}
