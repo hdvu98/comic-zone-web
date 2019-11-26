@@ -1,0 +1,121 @@
+.list{
+    overflow: hidden;
+    padding: 2rem 0;
+    .list-header{
+        padding: 1rem 0;
+        font-size: 1.5rem;
+        font-weight: bold;
+        white-space: .3rem;
+        color: #fff;
+        padding-left: 2rem;
+        position: relative;
+        &::before{
+            width: 0.6em;
+            height: 1.5em;
+            left: 0;
+            top: 0.5em;
+            content: "";
+            position: absolute;
+            background-color: #a4ce3a;
+        }
+    }
+    .list-items{
+        margin: 1rem 0;
+    }
+}
+.my-card{
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+
+    margin-right: 10px;
+    &:last-child(){
+        margin-right: 0;
+    }
+    &:hover{
+        cursor: pointer;
+        // .overlay{
+        //     background-color: #05a44d;
+        // }
+        img{
+            filter: blur(7px);
+            -webkit-filter: blur(7px);
+        }
+        border: 1px solid #a4ce3a;
+    }
+
+    .overlay{
+        width: 100%;
+        height: 100%;
+        content:'';
+        position: absolute;
+        background-color:#0000008a;
+        top: 0;
+        left: 0;
+    }
+    .card-content{
+        width: 100%;
+        height: 100%;
+        top: 25%;
+        left: 0;
+        position: absolute;
+        color: white;
+    }
+    .card-title{
+        font-weight: bold;
+    }
+    .countdown{
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+}
+.btn-see-more {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin: 1rem 0;
+    &:hover{
+        text-decoration: none;
+        color: #a4ce3a;
+    }
+}
+.break-line{
+    content: '';
+    width: 100%;
+    height: 2px;
+    margin: 2rem 0;
+    background-color: #292929;
+}
+.card{
+    background-color:  #292929;
+    color: #fff;
+    margin-right: 10px;
+    margin-top: 10px;
+    padding-bottom: 133.33%;
+    position: relative;
+    .card-content{
+        padding: 10px;
+        height: 20%;
+        position: absolute;
+        overflow: hidden;
+        top: 80%;
+        width: 100%;
+        .name{
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap
+        }
+    }
+    .img-area{
+        position: absolute;
+        overflow: hidden;
+        height: 80%;
+        width: 100%;
+        .card-thumbnail{
+            max-height: 100%;
+            width: auto  !important;
+        }
+    }
+}

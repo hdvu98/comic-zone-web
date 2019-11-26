@@ -1,0 +1,352 @@
+@import './bootstrap.min.css';
+#header .logo {
+  width: 6rem;
+  height: 6rem;
+}
+#header .app-bar-color {
+  background-color: #292929;
+}
+
+.carousel .carousel-control {
+  font-size: 3rem;
+}
+.carousel .carousel-item {
+  height: 60vh;
+  width: 100%;
+  min-height: 300px;
+  max-height: 600px;
+}
+.carousel .carousel-item img {
+  filter: brightness(50%) contrast(79%);
+  -webkit-filter: brightness(50%) contrast(79%);
+  width: 100%;
+}
+.carousel .carousel-item:hover {
+  cursor: pointer;
+}
+.carousel .carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.carousel .content-area {
+  position: absolute;
+  left: 15%;
+  right: 15%;
+  width: 70%;
+  bottom: 5rem;
+}
+.carousel .carousel-caption {
+  display: inline-block;
+  width: 100%;
+  position: relative !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0;
+}
+.carousel .carousel-caption .chapter-name {
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: bold;
+  white-space: 0.2em;
+  text-align: start;
+}
+.carousel .carousel-caption .chapter {
+  display: block;
+  margin-left: 0.5rem;
+  font-size: 1rem;
+}
+.carousel .carousel-caption .comic-name {
+  text-decoration: none;
+  background-color: #a4ce3a;
+  color: white;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+.carousel .carousel-caption .comic-name:hover {
+  background-color: #05a44d;
+}
+.carousel .carousel-caption .date {
+  display: block;
+}
+.carousel .rank {
+  background: #a4ce3a;
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+  font-weight: bolder;
+  padding: 0.3rem 1rem;
+  margin-right: 2rem;
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  top: 0;
+  left: 15%;
+}
+.carousel .rank:before {
+  content: "";
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 20px solid transparent;
+  border-top: 20px solid #a4ce3a;
+  border-left: 2.5rem solid #a4ce3a;
+  border-right: 2.5rem solid transparent;
+}
+.carousel .rank::after {
+  content: "";
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 20px solid transparent;
+  border-top: 20px solid #a4ce3a;
+  border-right: 2.5rem solid #a4ce3a;
+  border-left: 2.5rem solid transparent;
+}
+.carousel .cover {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.carousel .cover .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0000008a;
+}
+
+.list {
+  overflow: hidden;
+  padding: 2rem 0;
+}
+.list .list-header {
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  white-space: 0.3rem;
+  color: #fff;
+  padding-left: 2rem;
+  position: relative;
+}
+.list .list-header::before {
+  width: 0.6em;
+  height: 1.5em;
+  left: 0;
+  top: 0.5em;
+  content: "";
+  position: absolute;
+  background-color: #a4ce3a;
+}
+.list .list-items {
+  margin: 1rem 0;
+}
+
+.my-card {
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  margin-right: 10px;
+}
+.my-card:last-child() {
+  margin-right: 0;
+}
+.my-card:hover {
+  cursor: pointer;
+  border: 1px solid #a4ce3a;
+}
+.my-card:hover img {
+  filter: blur(7px);
+  -webkit-filter: blur(7px);
+}
+.my-card .overlay {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  background-color: #0000008a;
+  top: 0;
+  left: 0;
+}
+.my-card .card-content {
+  width: 100%;
+  height: 100%;
+  top: 25%;
+  left: 0;
+  position: absolute;
+  color: white;
+}
+.my-card .card-title {
+  font-weight: bold;
+}
+.my-card .countdown {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.btn-see-more {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+.btn-see-more:hover {
+  text-decoration: none;
+  color: #a4ce3a;
+}
+
+.break-line {
+  content: "";
+  width: 100%;
+  height: 2px;
+  margin: 2rem 0;
+  background-color: #292929;
+}
+
+.card {
+  background-color: #292929;
+  color: #fff;
+  margin-right: 10px;
+  margin-top: 10px;
+  padding-bottom: 133.33%;
+  position: relative;
+}
+.card .card-content {
+  padding: 10px;
+  height: 20%;
+  position: absolute;
+  overflow: hidden;
+  top: 80%;
+  width: 100%;
+}
+.card .card-content .name {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.card .img-area {
+  position: absolute;
+  overflow: hidden;
+  height: 80%;
+  width: 100%;
+}
+.card .img-area .card-thumbnail {
+  max-height: 100%;
+  width: auto !important;
+}
+
+.scroll-btn {
+  height: 3rem;
+  width: 3rem;
+  background: #a4ce3a;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 9999;
+  line-height: 3rem;
+  text-align: center;
+  cursor: pointer;
+  bottom: 4rem;
+  right: 3rem;
+}
+.scroll-btn .up-arrow {
+  color: #fff;
+  font-size: 1.5rem;
+  padding-top: 0.7rem;
+}
+.scroll-btn:hover {
+  background: #05a44d;
+}
+
+.appear {
+  display: block;
+  -webkit-animation-name: scrollToAppear;
+  /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 1s;
+  /* Safari 4.0 - 8.0 */
+  animation-name: scrollToAppear;
+  animation-duration: 1s;
+}
+
+.disapear {
+  display: none;
+  -webkit-animation-name: scrollToDisappear;
+  /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 1s;
+  /* Safari 4.0 - 8.0 */
+  animation-name: scrollToDisappear;
+  animation-duration: 1s;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes scrollToAppear {
+  0% {
+    opacity: 0%;
+    bottom: 1rem;
+    right: 3rem;
+  }
+  100% {
+    opacity: 100%;
+    bottom: 4rem;
+    right: 3rem;
+  }
+}
+/* Standard syntax */
+@keyframes scrollToAppear {
+  0% {
+    opacity: 0%;
+    bottom: 1rem;
+    right: 3rem;
+  }
+  100% {
+    opacity: 100%;
+    bottom: 4rem;
+    right: 3rem;
+  }
+}
+@-webkit-keyframes scrollToDisappear {
+  0% {
+    opacity: 100%;
+    bottom: 4rem;
+    right: 3rem;
+  }
+  100% {
+    opacity: 0%;
+    bottom: 1rem;
+    right: 3rem;
+  }
+}
+/* Standard syntax */
+@keyframes scrollToDisappear {
+  0% {
+    opacity: 100%;
+    bottom: 4rem;
+    right: 3rem;
+  }
+  100% {
+    opacity: 0%;
+    bottom: 1rem;
+    right: 3rem;
+  }
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+}
+
+#home {
+  background-color: #121212;
+}
+
+/*# sourceMappingURL=index.css.map */

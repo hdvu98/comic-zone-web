@@ -1,0 +1,13 @@
+@import './header.scss';
+@import './bootstrap.min.css';
+@import './carousel.scss';
+@import './card.scss';
+@import './scroll-btn.scss';
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+#home{
+    background-color: #121212;
+}
