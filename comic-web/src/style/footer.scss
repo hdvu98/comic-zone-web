@@ -1,0 +1,26 @@
+.social-media{
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 0 0.75rem;
+    text-decoration: none;
+    &:hover{
+        text-decoration: none;
+        transition: all ease-in .5s;
+    }
+    &.facebook:hover{
+        color: #3b5998;
+    }
+    &.google:hover{
+        color: #EA4335;
+    }
+    &.instagram:hover{
+        color: #F58529;
+    }
+    &.twitter:hover{
+        color: #00acee;
+    }
+
+}
+#footer{
+    color: #fff;
+}

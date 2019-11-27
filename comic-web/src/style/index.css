@@ -296,6 +296,25 @@
   margin: 0;
 }
 
+.list-header {
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  white-space: 0.3rem;
+  color: #fff;
+  padding-left: 2rem;
+  position: relative;
+}
+.list-header::before {
+  width: 0.6em;
+  height: 1.5em;
+  left: 0;
+  top: 0.5em;
+  content: "";
+  position: absolute;
+  background-color: #a4ce3a;
+}
+
 .scroll-btn {
   height: 3rem;
   width: 3rem;
@@ -389,9 +408,89 @@
     right: 3rem;
   }
 }
+.social-media {
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 0 0.75rem;
+  text-decoration: none;
+}
+.social-media:hover {
+  text-decoration: none;
+  transition: all ease-in 0.5s;
+}
+.social-media.facebook:hover {
+  color: #3b5998;
+}
+.social-media.google:hover {
+  color: #EA4335;
+}
+.social-media.instagram:hover {
+  color: #F58529;
+}
+.social-media.twitter:hover {
+  color: #00acee;
+}
+
+#footer {
+  color: #fff;
+}
+
+.ranking-card {
+  height: 6rem;
+  width: 100%;
+  position: relative;
+  margin: 1rem 0;
+  padding: 10px;
+  border-radius: 10px;
+}
+.ranking-card:hover {
+  background: #292929;
+}
+.ranking-card .content {
+  width: 100%;
+  height: 100%;
+}
+.ranking-card .thumbnail {
+  width: 4.5rem;
+  height: 4.5rem;
+  overflow: hidden;
+}
+
+.thumbnail-fluid {
+  max-height: 100% !important;
+  width: auto;
+}
+
+.ranking-body {
+  padding: 2.5rem 2rem;
+  border-radius: 2rem;
+  background: #121212;
+  overflow-y: scroll;
+  height: 25rem;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+.ranking-body::-webkit-scrollbar {
+  width: 10px;
+}
+.ranking-body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 2rem;
+}
+.ranking-body::-webkit-scrollbar-thumb {
+  background: #a4ce3a;
+  border-radius: 2rem;
+}
+.ranking-body::-webkit-scrollbar-thumb:hover {
+  background: #05a44d;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
+  color: #fff;
 }
 
 #home {

@@ -170,3 +170,21 @@
     }
 
 }
+.list-header{
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    white-space: .3rem;
+    color: #fff;
+    padding-left: 2rem;
+    position: relative;
+    &::before{
+        width: 0.6em;
+        height: 1.5em;
+        left: 0;
+        top: 0.5em;
+        content: "";
+        position: absolute;
+        background-color: #a4ce3a;
+    }
+}
