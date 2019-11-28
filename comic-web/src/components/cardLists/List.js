@@ -11,7 +11,7 @@ function List(props){
             </div>
             <div className="row list-items">
                 {listItems.slice(0,8).map((item,index)=>{
-                    return (<div className="col-3 m-0 p-0"><Card item={item}/></div>);
+                    return (<div className="col-12 col-sm-6 col-md-3 m-0 p-0"><Card item={item}/></div>);
                 })}
             </div>
             {/* <div className="break-line"></div> */}

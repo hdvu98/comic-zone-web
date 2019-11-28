@@ -6,7 +6,8 @@ const Ranking=(props)=>{
     return(
         <div id="Ranking">
             <div className="title list-header">Bảng xếp hạng</div>
-            <div className="ranking-body">
+            <div className="ranking-wrapper">
+                <div className="ranking-body">
                 {list.map((item,index)=>{
                     const {thumbnail,name,views, ratePoint,author} = item;
                     return(<RankingCard 
@@ -17,6 +18,8 @@ const Ranking=(props)=>{
                         ratePoint={ratePoint} 
                         author={author}/>);
                 })}
+                </div>
+                
             </div>
         </div>
     );

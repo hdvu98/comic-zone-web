@@ -12,7 +12,7 @@ function CountdownList(props){
             <div className="row list-items">
                 {listItems.splice(0,4).map((item,index)=>{
                     const {thumbnail, title, publicTime} = item;
-                    return (<div className="col-3 m-0 p-0"><CountDownCard thumbnail={thumbnail} title={title} publicTime={publicTime}/></div>);
+                    return (<div className="col-12 col-sm-6 col-md-3 m-0 p-0"><CountDownCard thumbnail={thumbnail} title={title} publicTime={publicTime}/></div>);
                 })}
             </div>
             {/* <div className="break-line"></div> */}
