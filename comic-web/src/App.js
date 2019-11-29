@@ -4,6 +4,7 @@ import '../src/style/index.css';
 import {BrowserRouter,Switch,Route} from 'react-router-dom';
 import Header from './components/header/Header';
 import theme from './theme/index';
+import Navbars from './components/navigation-bar/NavigationBar';
 import Home from './screen/home';
 import Footer from './components/footer/footer';
 import ScrollTop from './components/scrollTop/scrollTop';
@@ -13,7 +14,8 @@ function App() {
     <div className="App">
       <ScrollTop/>
       <MuiThemeProvider theme={theme}>
-        <Header/>
+        {/* <Header/> */}
+        <Navbars/>
         <BrowserRouter>
           <Switch>
           <Route path="/">

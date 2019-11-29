@@ -17,7 +17,7 @@ import {Container} from 'reactstrap';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import $ from 'jquery';
 import logo from '../../assets/logo.svg';
-import shadows from '@material-ui/core/styles/shadows';
+import {MENU} from '../../common/constant/menu';
 
 const useStyles = makeStyles(theme => (
   {
@@ -118,7 +118,7 @@ export default function PrimarySearchAppBar() {
   };
 
   const menuId = 'primary-search-account-menu';
-  const renderMenu = (
+  const renderProfileMenu = (
     <Menu
       anchorEl={anchorEl}
       anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
@@ -128,8 +128,10 @@ export default function PrimarySearchAppBar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+      <MenuItem onClick={handleMenuClose}>Thông tin cá nhân</MenuItem>
+      <MenuItem onClick={handleMenuClose}>Đổi mật khẩu</MenuItem>
+      <MenuItem onClick={handleMenuClose}>Lịch sử đọc</MenuItem>
+      <MenuItem onClick={handleMenuClose}>Yêu thích</MenuItem>
     </Menu>
   );
 
@@ -235,7 +237,7 @@ export default function PrimarySearchAppBar() {
         
       </AppBar>
       {renderMobileMenu}
-      {renderMenu}
+      {renderProfileMenu}
     </div>
     
   );

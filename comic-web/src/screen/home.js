@@ -9,6 +9,7 @@ import {categories} from '../common/constant/categories';
 import CategoryList from '../components/category/ListCategory';
 import Ranking from '../components/ranking/Rankings';
 import {ranking} from '../common/constant/ranking';
+
 function Home(){
     return (
         <section id="home">

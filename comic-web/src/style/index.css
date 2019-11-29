@@ -1,10 +1,23 @@
 @import './bootstrap.min.css';
-#header .logo {
-  width: 6rem;
-  height: 6rem;
+.logo {
+  width: 5rem;
+  height: 4rem;
 }
-#header .app-bar-color {
+
+.app-bar-color {
   background-color: #292929;
+}
+
+.bg-dark {
+  background-color: #121212 !important;
+}
+
+.navbar {
+  height: 96px;
+}
+
+.MuiInputBase-input {
+  color: white !important;
 }
 
 .carousel {
@@ -304,6 +317,7 @@
   color: #fff;
   padding-left: 2rem;
   position: relative;
+  text-transform: uppercase;
 }
 .list-header::before {
   width: 0.6em;

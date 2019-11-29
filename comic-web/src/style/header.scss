@@ -1,9 +1,16 @@
-#header{
-    .logo{
-        width: 6rem;
-        height: 6rem;
-    }
-    .app-bar-color{
-        background-color: #292929;
-    }
+.logo{
+    width: 5rem;
+    height: 4rem;
+}
+.app-bar-color{
+    background-color: #292929;
+}
+.bg-dark{
+    background-color: #121212 !important;
+}
+.navbar{
+    height: 96px ;
+}
+.MuiInputBase-input{
+    color: white !important;
 }
