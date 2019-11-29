@@ -20,9 +20,6 @@
   color: white !important;
 }
 
-.carousel {
-  margin-top: 96px;
-}
 .carousel .carousel-control {
   font-size: 3rem;
 }
@@ -547,7 +544,8 @@ body {
   color: #fff;
 }
 
-#home {
+#home, #search-result {
+  margin-top: 96px;
   background-color: #292929;
 }
 

@@ -8,6 +8,7 @@ import Navbars from './components/navigation-bar/NavigationBar';
 import Home from './screen/home';
 import Footer from './components/footer/footer';
 import ScrollTop from './components/scrollTop/scrollTop';
+import SearchResult from './screen/SearchResult';
 
 function App() {
   return (
@@ -15,11 +16,13 @@ function App() {
       <ScrollTop/>
       <MuiThemeProvider theme={theme}>
         {/* <Header/> */}
-        <Navbars/>
+
         <BrowserRouter>
+        <Navbars/>
           <Switch>
-          <Route path="/">
-            <Home />
+          <Route path="/" exact component={Home}>
+          </Route>
+          <Route path="/results/:search" component={SearchResult}>
           </Route>
         </Switch>
         </BrowserRouter>

@@ -12,6 +12,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Chip from '@material-ui/core/Chip';
 import { InputBase} from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
+import {  withRouter, useHistory} from 'react-router-dom'
 
 const suggestions = [
   { label: 'Afghanistan' },
@@ -50,75 +51,10 @@ const suggestions = [
   { label: 'Brunei Darussalam' },
 ];
 
-
-// const useStyles = makeStyles(theme => ({
-//   root: {
-//     flexGrow: 1,
-//   },
-//   container: {
-//     flexGrow: 1,
-//     position: 'relative',
-//   },
-//   paper: {
-//     position: 'absolute',
-//     zIndex: 1,
-//     marginTop: theme.spacing(1),
-//     left: '24px',
-//     right: 0,
-//     width: 'calc(100% - 42px)!important'
-//   },
-//   chip: {
-//     margin: theme.spacing(0.5, 0.25),
-//   },
-//   search: {
-//     display:'flex',
-//     flexDirection: 'row',
-//     position: 'relative',
-//     borderRadius: theme.shape.borderRadius,
-//     backgroundColor: fade(theme.palette.common.white, 0.15),
-//     '&:hover': {
-//       backgroundColor: fade(theme.palette.common.white, 0.25),
-//     },
-//     marginRight: theme.spacing(2),
-//     marginLeft: 0,
-//     width: '100%',
-//     [theme.breakpoints.up('sm')]: {
-//       marginLeft: theme.spacing(3),
-//       width: 'auto',
-//     },
-//     paddingLeft: '10px',
-//     color: "#fff"
-//   },
-//   searchIcon: {
-//     width: theme.spacing(7),
-//     position: 'relative',
-//     pointerEvents: 'none',
-//     display: 'block',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//   },
-//   inputRoot: {
-//     color: 'inherit',
-//   },
-//   inputInput: {     
-//     padding: theme.spacing(1, 1, 1, 7),
-//     transition: theme.transitions.create('width'),
-//     width: '100%',
-//     [theme.breakpoints.up('md')]: {
-//       width: 200,
-//     },
-//     display: 'block',
-//   },
-// }));
-
-
-//
 function renderInputComponent(inputProps) {
-  const { InputProps, classes, ref, ...other } = inputProps;
+  const { InputProps, classes, ref, ...other } = inputProps
 
   return (
-    <div className="d-block">
-          <div className={classes.search}>
     <InputBase
         fullWidth
         InputProps={{
@@ -131,11 +67,26 @@ function renderInputComponent(inputProps) {
       }}
       {...other}
     />
-     <div className={`d-flex align-items-center ${classes.searchIcon}`}>
-      <SearchIcon />
-    </div>
-  </div>
-    </div>
+//     {/* </div>
+//         <div className="d-block">
+//         <div className={classes.search}>
+//   <InputBase
+//       fullWidth
+//       InputProps={{
+//       inputRef: ref,
+//       classes: {
+//         root: classes.inputRoot,
+//         input: classes.inputInput,
+//       },
+//       ...InputProps,
+//     }}
+//     {...other}
+//   />
+//    <div className={`d-flex align-items-center ${classes.searchIcon}`}>
+//     <SearchIcon/>
+//   </div>
+// </div>
+//   </div> */}
 
   );
 }
@@ -186,6 +137,7 @@ const useStyles = makeStyles(theme => ({
   },
   container: {
     position: 'relative',
+    flexGrow:1
   },
   suggestionsContainerOpen: {
     position: 'absolute',
@@ -228,7 +180,7 @@ const useStyles = makeStyles(theme => ({
   searchIcon: {
     width: theme.spacing(7),
     position: 'relative',
-    pointerEvents: 'none',
+    pointerEvents: 'onClick',
     display: 'block',
     alignItems: 'center',
     justifyContent: 'center',
@@ -248,13 +200,14 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function IntegrationAutosuggest() {
+function IntegrationAutosuggest() {
   const classes = useStyles();
-  const [anchorEl, setAnchorEl] = React.useState(null);
   const [state, setState] = React.useState({
     single: '',
     popper: '',
   });
+
+  let history = useHistory();
 
   const [stateSuggestions, setSuggestions] = React.useState([]);
 
@@ -273,6 +226,11 @@ export default function IntegrationAutosuggest() {
     });
   };
 
+  const handleClickSearch =(e)=>{
+    e.preventDefault();
+    history.push(`/results/${state.single}`)
+  }
+
   const autosuggestProps = {
     renderInputComponent,
     suggestions: stateSuggestions,
@@ -284,28 +242,37 @@ export default function IntegrationAutosuggest() {
 
   return (
     <div className={classes.root}>
-      <Autosuggest
-        {...autosuggestProps}
-        inputProps={{
-          classes,
-          id: 'react-autosuggest-simple',
-          label: 'Country',
-          placeholder: 'Nhập tên truyện, tác giả để tìm kiếm...',
-          value: state.single,
-          onChange: handleChange('single'),
-        }}
-        theme={{
-          container: classes.container,
-          suggestionsContainerOpen: classes.suggestionsContainerOpen,
-          suggestionsList: classes.suggestionsList,
-          suggestion: classes.suggestion,
-        }}
-        renderSuggestionsContainer={options => (
-          <Paper {...options.containerProps} square>
-            {options.children}
-          </Paper>
-        )}
-      />
+      <div className="d-block">
+        <div className={classes.search}>
+          <Autosuggest
+          {...autosuggestProps}
+          inputProps={{
+            classes,
+            id: 'react-autosuggest-simple',
+            label: 'Country',
+            placeholder: 'Nhập tên truyện, tác giả để tìm kiếm...',
+            value: state.single,
+            onChange: handleChange('single'),
+          }}
+          theme={{
+            container: classes.container,
+            suggestionsContainerOpen: classes.suggestionsContainerOpen,
+            suggestionsList: classes.suggestionsList,
+            suggestion: classes.suggestion,
+          }}
+          renderSuggestionsContainer={options => (
+            <Paper {...options.containerProps} square>
+              {options.children}
+            </Paper>
+          )}
+          /> 
+          <div onClick={ handleClickSearch} className={`d-flex align-items-center ${classes.searchIcon}`}>
+            <SearchIcon />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
+
+export default withRouter(IntegrationAutosuggest);
