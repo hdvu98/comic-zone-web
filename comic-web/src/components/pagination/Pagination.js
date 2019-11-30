@@ -10,17 +10,33 @@ const useStyles = makeStyles(theme => ({
     root:{
         fontSize:'14px',
         color: '#ffffff',
-        margin:'2rem 0'
+        margin:'2rem 0',
+       
     },
     rootCurrent:{
         background: "#a4ce3a",
-        color: '#ffffff'
+        color: '#ffffff',
+        '&:hover':{
+          background:'#05a44d'
+        }
+    },
+    colorInheritCurrent:{
+      color: '#ffffff !inherit'
     },
     disabled:{
-        color: '#ffffff'
+      color: '#6c757d !important'
     },
     rootStandard:{
-        color: '#ffffff'
+        color: '#ffffff',
+        '&:hover':{
+          background:'#05a44d'
+        }
+    },
+    textPrimary:{
+      color:'#ffffff',
+      '&:hover':{
+        background:'#05a44d'
+      }
     }
 }))
 
@@ -28,6 +44,7 @@ const MyPagination =(props)=> {
 
   const [offset, setOffet] = useState(0);
   const {total}= props;
+  const {limit} = props;
 
   const classes = useStyles();
  
@@ -40,9 +57,9 @@ const MyPagination =(props)=> {
         <CssBaseline />
         <Pagination
             classes={classes}
-          limit={8}
+          limit={limit}
           offset={offset}
-          total="100"
+          total={total}
           onClick={(e, offset) => handleClick(offset)}
         />
       </MuiThemeProvider>

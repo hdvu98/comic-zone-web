@@ -11,8 +11,8 @@ return (
     <section id="search-result">
         <Container>
             <ComicCardList title={`Kết quả tìm kiếm cho "${search}"`} listItems={ListComics}></ComicCardList>
-            <div className="d-flex justify-content-end">
-                <Pagignation  ></Pagignation>
+            <div className="d-flex justify-content-center">
+                <Pagignation limit={8} total={ListComics.length} ></Pagignation>
             </div>
         </Container>
     </section>

@@ -53,9 +53,9 @@ const suggestions = [
 
 function renderInputComponent(inputProps) {
   const { InputProps, classes, ref, ...other } = inputProps
-
   return (
     <InputBase
+        onKeyPress={()=>inputProps.onKeyPress}
         fullWidth
         InputProps={{
         inputRef: ref,
@@ -96,7 +96,7 @@ function renderSuggestion(suggestion, { query, isHighlighted }) {
   const parts = parse(suggestion.label, matches);
 
   return (
-    <MenuItem selected={isHighlighted} component="div">
+    <MenuItem selected={isHighlighted}  component="div">
       <div>
         {parts.map(part => (
           <span key={part.text} style={{ fontWeight: part.highlight ? 500 : 400 }}>
@@ -143,9 +143,9 @@ const useStyles = makeStyles(theme => ({
     position: 'absolute',
     zIndex: 1,
     marginTop: theme.spacing(1),
-    left: '24px',
+    left: 0,
     right: 0,
-    width: 'calc(100% - 48px)'
+    width:'100%'
   },
   suggestion: {
     display: 'block',
@@ -228,7 +228,15 @@ function IntegrationAutosuggest() {
 
   const handleClickSearch =(e)=>{
     e.preventDefault();
-    history.push(`/results/${state.single}`)
+    if(state.single.length>0)
+      history.push(`/results/${state.single}`)
+  }
+  const handleKeyPress =(e)=>{
+      if(e.target.value.length>0 && e.key === 'Enter'){
+        history.push(`/results/${state.single}`)
+      }
+      return false;
+
   }
 
   const autosuggestProps = {
@@ -253,6 +261,7 @@ function IntegrationAutosuggest() {
             placeholder: 'Nhập tên truyện, tác giả để tìm kiếm...',
             value: state.single,
             onChange: handleChange('single'),
+            onKeyPress: (e)=>handleKeyPress(e)
           }}
           theme={{
             container: classes.container,
@@ -266,7 +275,7 @@ function IntegrationAutosuggest() {
             </Paper>
           )}
           /> 
-          <div onClick={ handleClickSearch} className={`d-flex align-items-center ${classes.searchIcon}`}>
+          <div onClick={handleClickSearch} className={`d-flex align-items-center ${classes.searchIcon}`}>
             <SearchIcon />
           </div>
         </div>

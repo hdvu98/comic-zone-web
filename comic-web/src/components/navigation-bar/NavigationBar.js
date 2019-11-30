@@ -21,7 +21,7 @@ const Example = (props) => {
 
   return (
     <Navbar bg="dark" expand="lg" fixed="top" variant="dark">
-    <Navbar.Brand href="#home"><img className="logo" alt="" src={logo}></img></Navbar.Brand>
+    <Navbar.Brand href="/"><img className="logo" alt="" src={logo}></img></Navbar.Brand>
     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
     <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="mr-auto">
@@ -30,7 +30,7 @@ const Example = (props) => {
                 if(item.children)
                 return( 
                 <NavDropdown title={item.parents} id="collasible-nav-dropdown">
-                    {item.children.map(item=>(<NavDropdown.Item href="#">{item.category || item.country}</NavDropdown.Item>))}
+                    {item.children.map(item=>(<NavDropdown.Item href="/">{item.category || item.country}</NavDropdown.Item>))}
                 </NavDropdown>)
 
                 return(<Nav.Link>{item.parents}</Nav.Link>);

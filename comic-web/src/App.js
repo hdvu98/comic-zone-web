@@ -9,6 +9,7 @@ import Home from './screen/home';
 import Footer from './components/footer/footer';
 import ScrollTop from './components/scrollTop/scrollTop';
 import SearchResult from './screen/SearchResult';
+import ComicPage from './screen/ComicPage';
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
           <Route path="/" exact component={Home}>
           </Route>
           <Route path="/results/:search" component={SearchResult}>
+          </Route>
+          <Route path="/comic/:slug" component={ComicPage}>
           </Route>
         </Switch>
         </BrowserRouter>
