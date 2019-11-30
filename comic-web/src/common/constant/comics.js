@@ -23,7 +23,7 @@ const ListComics = [
         author: 'Eiichiro Oda',
         total: '---', 
         current: '969',
-        id:'06',
+        id:'02',
         listChapters:[
             {id: '1'},{id:'2'},{id:'3'},{id:'4'},{id:'5'},{id:'6'}, {id:'7'},{id:'8'},{id:'9'},{id:'10'}
         ]
@@ -42,7 +42,7 @@ const ListComics = [
         author: 'Eiichiro Oda',
         total: '---', 
         current: '969',
-        id:'02',
+        id:'03',
         listChapters:[
             {id: '1'},{id:'2'},{id:'3'},{id:'4'},{id:'5'},{id:'6'}, {id:'7'},{id:'8'},{id:'9'},{id:'10'}
         ]
@@ -61,7 +61,7 @@ const ListComics = [
         author: 'Eiichiro Oda',
         total: '---', 
         current: '969',
-        id:'03',
+        id:'04',
         listChapters:[
             {id: '1'},{id:'2'},{id:'3'},{id:'4'},{id:'5'},{id:'6'}, {id:'7'},{id:'8'},{id:'9'},{id:'10'}
         ],
@@ -79,7 +79,7 @@ const ListComics = [
         author: 'Eiichiro Oda',
         total: '---', 
         current: '969',
-        id:'04',
+        id:'05',
         listChapters:[
             {id: '1'},{id:'2'},{id:'3'},{id:'4'},{id:'5'},{id:'6'}, {id:'7'},{id:'8'},{id:'9'},{id:'10'}
         ],
@@ -97,7 +97,7 @@ const ListComics = [
         author: 'Eiichiro Oda',
         total: '---', 
         current: '969',
-        id: '07',
+        id: '06',
         listChapters:[
             {id: '1'},{id:'2'},{id:'3'},{id:'4'},{id:'5'},{id:'6'}, {id:'7'},{id:'8'},{id:'9'},{id:'10'}
         ],
@@ -115,7 +115,7 @@ const ListComics = [
         author: 'Eiichiro Oda',
         total: '---', 
         current: '969',
-        id:'05',
+        id:'07',
         listChapters:[
             {id: '1'},{id:'2'},{id:'3'},{id:'4'},{id:'5'},{id:'6'}, {id:'7'},{id:'8'},{id:'9'},{id:'10'}
         ],

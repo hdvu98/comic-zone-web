@@ -14,6 +14,7 @@ const ComicPage =(props)=>{
     const displayViews = numberWithCommas(views);
     const [isFavorite,setIsFavorite] = useState(false);
     const [favoritesDisplay,setfavoritesDisplay] = useState(numberWithCommas(favorites));
+    const firstChap = listChapters[0];
 
     const handleClickFavorite = async(e)=>{
         e.preventDefault();
@@ -55,7 +56,7 @@ const ComicPage =(props)=>{
                         <div className="favorites"><i class="fas fa-heart"></i><span className="favorite-number">{favoritesDisplay}</span></div>
                     </div>
                     <div className="d-flex flex-row mt-3">
-                        <a class="my-btn standard-btn" href={`/comic/${slug}`}>Đọc ngay</a>
+                        <a class="my-btn standard-btn" href={`/comic/${slug}/${firstChap.id}`}>Đọc ngay</a>
                         <div onClick={handleClickFavorite} className="my-btn love-btn">{isFavorite?<i class="fas fa-heart"></i>:<i class="far fa-heart"></i>}{`${isFavorite? ' Hủy yêu thích':' Yêu thích'}` }</div>
                     </div>
                     

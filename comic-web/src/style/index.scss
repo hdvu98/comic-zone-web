@@ -6,17 +6,19 @@
 @import './footer.scss';
 @import './ranking.scss';
 @import './comic-page.scss';
+@import './reading.scss';
 body{
     font-family: 'Montserrat', sans-serif !important;
     font-size: 14px !important;
     color: #fff !important;
 }
 
-#home,#search-result,#comic-page{
+#home,#search-result,#comic-page,#reading{
     //background-color: #121212;
     margin-top: 96px;
     background-color: #292929;
     min-height: calc(100vh - 195px);
+    padding: 1rem 0 5rem 0rem;
 }
 #footer{
     padding: 3rem 0;
@@ -33,6 +35,7 @@ body{
     min-width: 10rem;
     text-align: center;
     margin: 0.5rem;
+    border: none;
     &:hover{
         text-decoration: none;
         background-color: #05a44d;

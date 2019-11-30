@@ -20,7 +20,7 @@ const Example = (props) => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <Navbar bg="dark" expand="lg" fixed="top" variant="dark">
+    <Navbar bg="dark" id="header" expand="lg" fixed="top" variant="dark">
     <Navbar.Brand href="/"><img className="logo" alt="" src={logo}></img></Navbar.Brand>
     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
     <Navbar.Collapse id="responsive-navbar-nav">
