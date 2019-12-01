@@ -7,6 +7,10 @@
 @import './ranking.scss';
 @import './comic-page.scss';
 @import './reading.scss';
+// SCSS
+@import "./image-gallery.scss";
+//Stylesheet with no icons
+@import "./image-gallery-no-icon.scss";
 body{
     font-family: 'Montserrat', sans-serif !important;
     font-size: 14px !important;

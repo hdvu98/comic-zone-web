@@ -5,6 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import {FormControl,NativeSelect,FormHelperText} from '@material-ui/core';
 import $ from 'jquery';
+import ImageGallery from 'react-image-gallery';
 import {chapterList} from '../common/constant/chapterList';
 import {ListComics} from '../common/constant/comics';
 import CommentForm from '../components/comment/CommentForm';
@@ -24,12 +25,19 @@ const useStyles = makeStyles(theme => ({
         color: '#000'
     }
   }));
+
+ const imageDisplay={
+     maxWidth: "100%",
+     textAlign: "center"
+ } 
 const ReadingScreen =(props)=>{
     const classes = useStyles();
     const {id}=useParams();
     const item = chapterList[0];
     const [modeDisplay,setModeDisplay] = useState(false);
     const [fixed,setFixed]= useState(false);
+    const [activePage,setActivePage]=useState(0);
+    const totalPage = item.pageList.length;
     
     useEffect(()=>{
         $(window).scroll(function() {
@@ -41,6 +49,11 @@ const ReadingScreen =(props)=>{
         });
       })
 
+    const handleChangePageDisplay=(e)=>{
+        e.preventDefault();
+        setActivePage(e.target.value);
+    }
+
     const renderDefault=(pageList)=>{
         return (   <div className="reading-area d-flex flex-column align-items-center bg-white">
                     {pageList.map(item=>
@@ -48,13 +61,54 @@ const ReadingScreen =(props)=>{
                     )}
                 </div>);
     }
+    const renderPageOtion =(totalPage)=>{
+    const items = []
+    for(let i =0 ;i < totalPage;i++){
+        items.push(<option value={i}> {`Trang ${i+1}`}</option>)
+    }
+    return items;
+}
     const renderSlide=(pageList)=>{
-        return (<div></div>);
+        let images = [];
+        pageList.map(item=>{
+            let image ={
+                thumbnail: item.src,
+                original: item.src
+            }
+            images.push(image);
+        })
+        return (<div><div className="reading-area text-center bg-white">
+            <ImageGallery items={images} 
+            originalClass={imageDisplay} 
+            showPlayButton={false} 
+            showThumbnails={false} 
+            infinite={false}
+            showIndex={false}
+            onSlide={()=>{$("html, body").animate({ scrollTop: 0 }, 10);}}
+            preventDefaultTouchmoveEvent={true}></ImageGallery>
+            </div>
+            <div className={`page-control justify-content-center row m-0 p-0 ${fixed && modeDisplay?'fixed-bottom':''}`}>
+                <div className="d-block align-items-center d-flex">
+            <FormControl className={classes.formControl}>
+                <NativeSelect
+                onChange={handleChangePageDisplay}
+                value={activePage}
+                name="age"
+                className={classes.select}
+                inputProps={{ 'aria-label': 'chapter' }}
+                >
+                    {renderPageOtion(totalPage)}
+                    {/* {ListComics[id].listChapters.map((item)=><option value={item.id}> {`Chương ${item.id}`}</option>)} */}
+                </NativeSelect>
+            </FormControl> / {totalPage}</div>
+            </div>
+            </div>);
     }
 
     const handleSwitchChange =(e)=>{
         e.preventDefault();
         setModeDisplay(!modeDisplay);
+        $("html, body").animate({ scrollTop: 0 }, 0);
     }
     return(<section id="reading">
         <div className="container">
