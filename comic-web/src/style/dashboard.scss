@@ -1,0 +1,39 @@
+.profile-dropdown{
+    background: transparent;
+    outline: none;
+    border: none;
+    &:hover,:focus,:active{
+        border: none;
+        background: #a4ce3a;
+    }
+}
+.show>.btn-primary.dropdown-toggle{
+    border: none;
+    background: #a4ce3a;
+    &:active,:focus{
+        background: #a4ce3a;
+
+    }
+}
+.dashboard-drawer{
+    &::-webkit-scrollbar {
+        width: 10px;
+      }
+      
+      /* Track */
+      &::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey; 
+        border-radius: 2rem;
+      }
+       
+      /* Handle */
+      &::-webkit-scrollbar-thumb {
+        background: #a4ce3a; 
+        border-radius: 2rem;
+      }
+      
+      /* Handle on hover */
+      &::-webkit-scrollbar-thumb:hover {
+        background: #05a44d; 
+      }
+}

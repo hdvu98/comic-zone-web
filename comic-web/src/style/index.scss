@@ -11,18 +11,22 @@
 @import "./image-gallery.scss";
 //Stylesheet with no icons
 @import "./image-gallery-no-icon.scss";
+@import './dashboard.scss';
 body{
     font-family: 'Montserrat', sans-serif !important;
     font-size: 14px !important;
     color: #fff !important;
 }
 
-#home,#search-result,#comic-page,#reading{
+#home,#search-result,#comic-page,#reading,#upload{
     //background-color: #121212;
     margin-top: 96px;
-    background-color: #292929;
+    background: #292929;
     min-height: calc(100vh - 195px);
-    padding: 1rem 0 5rem 0rem;
+    // padding: 1rem 0 5rem 0rem;
+}
+#upload{
+    background: #fafafa;
 }
 #footer{
     padding: 3rem 0;

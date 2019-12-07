@@ -1555,17 +1555,58 @@
   }
 }
 
+.profile-dropdown {
+  background: transparent;
+  outline: none;
+  border: none;
+}
+.profile-dropdown:hover, .profile-dropdown :focus, .profile-dropdown :active {
+  border: none;
+  background: #a4ce3a;
+}
+
+.show > .btn-primary.dropdown-toggle {
+  border: none;
+  background: #a4ce3a;
+}
+.show > .btn-primary.dropdown-toggle:active, .show > .btn-primary.dropdown-toggle :focus {
+  background: #a4ce3a;
+}
+
+.dashboard-drawer {
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+.dashboard-drawer::-webkit-scrollbar {
+  width: 10px;
+}
+.dashboard-drawer::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 2rem;
+}
+.dashboard-drawer::-webkit-scrollbar-thumb {
+  background: #a4ce3a;
+  border-radius: 2rem;
+}
+.dashboard-drawer::-webkit-scrollbar-thumb:hover {
+  background: #05a44d;
+}
+
 body {
   font-family: "Montserrat", sans-serif !important;
   font-size: 14px !important;
   color: #fff !important;
 }
 
-#home, #search-result, #comic-page, #reading {
+#home, #search-result, #comic-page, #reading, #upload {
   margin-top: 96px;
-  background-color: #292929;
+  background: #292929;
   min-height: calc(100vh - 195px);
-  padding: 1rem 0 5rem 0rem;
+}
+
+#upload {
+  background: #fafafa;
 }
 
 #footer {
