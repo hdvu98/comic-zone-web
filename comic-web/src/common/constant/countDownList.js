@@ -1,22 +1,22 @@
 const countDownList=[
-    {thumbnail:"https://coverfiles.alphacoders.com/662/66269.jpg", 
-    title: "One Piece - Chương 999", 
+    {thumbnail:require('../../assets/one-piece/cover.jpg'), 
+    title: "One Piece - Chương 6", 
     publicTime:""
     },
-    {thumbnail:"https://coverfiles.alphacoders.com/662/66269.jpg", 
-    title: "One Piece - Chương 999", 
+    {thumbnail:require('../../assets/bleach/cover.jpg'), 
+    title: "Bleach - Chương 2", 
     publicTime:""
     },
-    {thumbnail:"https://coverfiles.alphacoders.com/662/66269.jpg", 
-    title: "One Piece - Chương 999", 
+    {thumbnail:require('../../assets/conan/cover.jpg'), 
+    title: "Conan - Chương 2", 
     publicTime:""
     },
-    {thumbnail:"https://coverfiles.alphacoders.com/662/66269.jpg", 
-    title: "One Piece - Chương 999", 
+    {thumbnail:require('../../assets/dragon-ball/cover.jpg'), 
+    title: "Dragon Ball - Chương 2", 
     publicTime:""
     },
-    {thumbnail:"https://coverfiles.alphacoders.com/662/66269.jpg", 
-    title: "One Piece - Chương 999", 
+    {thumbnail:require('../../assets/naruto/cover.jpg'), 
+    title: "Naruto - Chương 2", 
     publicTime:""
     }
     

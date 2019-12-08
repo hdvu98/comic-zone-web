@@ -8,14 +8,14 @@ const Ranking=(props)=>{
             <div className="title list-header">Bảng xếp hạng</div>
             <div className="ranking-wrapper">
                 <div className="ranking-body">
-                {list.map((item,index)=>{
-                    const {thumbnail,name,views, ratePoint,author} = item;
+                {list.slice(0,10).map((item,index)=>{
+                    const {src,name,views, rate,author} = item;
                     return(<RankingCard 
-                        thumbnail={thumbnail} 
+                        thumbnail={src} 
                         position={index+1} 
                         name={name} 
                         views={views} 
-                        ratePoint={ratePoint} 
+                        ratePoint={rate} 
                         author={author}/>);
                 })}
                 </div>

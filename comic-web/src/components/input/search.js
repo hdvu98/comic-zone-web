@@ -15,40 +15,17 @@ import SearchIcon from '@material-ui/icons/Search';
 import {  withRouter, useHistory} from 'react-router-dom'
 
 const suggestions = [
-  { label: 'Afghanistan' },
   { label: 'One Piece' },
-  { label: 'Naruto' },
-  { label: 'Algeria' },
-  { label: 'American Samoa' },
-  { label: 'Andorra' },
-  { label: 'Angola' },
-  { label: 'Anguilla' },
-  { label: 'Antarctica' },
-  { label: 'Antigua and Barbuda' },
-  { label: 'Argentina' },
-  { label: 'Armenia' },
-  { label: 'Aruba' },
-  { label: 'Australia' },
-  { label: 'Austria' },
-  { label: 'Azerbaijan' },
-  { label: 'Bahamas' },
-  { label: 'Bahrain' },
-  { label: 'Bangladesh' },
-  { label: 'Barbados' },
-  { label: 'Belarus' },
-  { label: 'Belgium' },
-  { label: 'Belize' },
-  { label: 'Benin' },
-  { label: 'Bermuda' },
-  { label: 'Bhutan' },
-  { label: 'Bolivia, Plurinational State of' },
-  { label: 'Bonaire, Sint Eustatius and Saba' },
-  { label: 'Bosnia and Herzegovina' },
-  { label: 'Botswana' },
-  { label: 'Bouvet Island' },
-  { label: 'Brazil' },
-  { label: 'British Indian Ocean Territory' },
-  { label: 'Brunei Darussalam' },
+  { label: 'Bleach - Sứ mạng thần chết'},
+  { label: 'Thám Tử Lừng Danh Conan'},
+  { label: 'Đại chúa tể'},
+  { label: 'Đấu La Đại Lục - Tuyệt thế đường môn'},
+  { label: 'Đấu Phá Thương Khung'},
+  { label: 'Doraemon'},
+  { label: 'Dragon Ball'},
+  { label: 'Naruto'},
+  { label: 'Pokemon Special'},
+
 ];
 
 function renderInputComponent(inputProps) {
@@ -228,12 +205,17 @@ function IntegrationAutosuggest() {
 
   const handleClickSearch =(e)=>{
     e.preventDefault();
-    if(state.single.length>0)
-      history.push(`/results/${state.single}`)
+    if(state.single.length>0){
+      const search = state.single;
+      setState({single: ''})
+      history.push(`/results/${search}`)
+    }
   }
   const handleKeyPress =(e)=>{
       if(e.target.value.length>0 && e.key === 'Enter'){
-        history.push(`/results/${state.single}`)
+        const search = state.single;
+        setState({single: ''})
+        history.push(`/results/${search}`)
       }
       return false;
 

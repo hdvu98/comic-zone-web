@@ -8,8 +8,7 @@ import { categories } from '../common/constant/categories';
 
 const ComicPage =(props)=>{
     let {slug} = useParams();
-    console.log(slug);
-    const item = ListComics.find(element=>element.slug===slug)
+    const item = ListComics.find(element=>element.slug === slug);
     const {src, comicName, author,total, current,rate,views,favorites, category,listChapters,desc} = item;
     const displayViews = numberWithCommas(views);
     const [isFavorite,setIsFavorite] = useState(false);

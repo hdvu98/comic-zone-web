@@ -1,50 +1,52 @@
 const categories = [
     {
-        thumbnail: 'https://coverfiles.alphacoders.com/662/66269.jpg',
-        category: 'Hành động'
+        thumbnail: require('../../assets/category/gia-dinh.jpg'),
+        category: 'Gia đình'
     },
     {
-        thumbnail: 'https://coverfiles.alphacoders.com/662/66269.jpg',
-        category: 'Phiêu lưu'
-    },
-    {
-        thumbnail: 'https://coverfiles.alphacoders.com/662/66269.jpg',
+        thumbnail: require('../../assets/category/hai-huoc.jpg'),
         category: 'Hài hước'
     },
     {
-        thumbnail: 'https://coverfiles.alphacoders.com/662/66269.jpg',
-        category: 'Ngôn tình'
+        thumbnail: require('../../assets/category/hanh-dong.jpg'),
+        category: 'Hành động'
     },
     {
-        thumbnail: 'https://coverfiles.alphacoders.com/662/66269.jpg',
+        thumbnail: require('../../assets/category/hoc-duong.jpg'),
         category: 'Học đường'
     },
+
     {
-        thumbnail: 'https://coverfiles.alphacoders.com/662/66269.jpg',
-        category: 'Thể thao'
-    },
-    {
-        thumbnail: 'https://coverfiles.alphacoders.com/662/66269.jpg',
-        category: 'Thần tượng'
-    },{
-        thumbnail: 'https://coverfiles.alphacoders.com/662/66269.jpg',
-        category: 'Lịch sử'
-    },
-    {
-        thumbnail: 'https://coverfiles.alphacoders.com/662/66269.jpg',
-        category: 'Lãng mạn'
-    },
-    {
-        thumbnail: 'https://coverfiles.alphacoders.com/662/66269.jpg',
+        thumbnail:  require('../../assets/category/kinh-di.jpg'),
         category: 'Kinh dị'
     },
     {
-        thumbnail: 'https://coverfiles.alphacoders.com/662/66269.jpg',
-        category: 'Trinh thám'
+        thumbnail: require('../../assets/category/lich-su.jpg'),
+        category: 'Lịch sử'
+    },    
+    {
+        thumbnail: require('../../assets/category/lang-man.jpg'),
+        category: 'Lãng mạn'
     },
     {
-        thumbnail: 'https://coverfiles.alphacoders.com/662/66269.jpg',
-        category: 'Gia đình'
+        thumbnail: require('../../assets/category/ngon-tinh.jpg'),
+        category: 'Ngôn tình'
+    },
+    {
+        thumbnail: require('../../assets/category/phieu-luu.jpeg'),
+        category: 'Phiêu lưu'
+    },
+    {
+        thumbnail: require('../../assets/category/the-thao.jpeg'),
+        category: 'Thể thao'
+    },
+    {
+        thumbnail: require('../../assets/category/than-tuong.jpg'),
+        category: 'Thần tượng'
+    },
+    {
+        thumbnail: require('../../assets/category/trinh-tham.png'),
+        category: 'Trinh thám'
     }
 ]
 

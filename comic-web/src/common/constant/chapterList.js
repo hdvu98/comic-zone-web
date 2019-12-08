@@ -1,9 +1,11 @@
 const chapterList =[
     {
+
       id: '1',
+      src: require('../../assets/one-piece/cover.jpg'),
       date: "25/11/2019",
       comicName: "One Piece",
-      chapterName: "Lorem ipsum dolor sit amet",
+      chapterName: "Mở đầu cuộc hành trình",
       chapter: "1",
       pageList:[
         {
@@ -208,6 +210,481 @@ const chapterList =[
         }
         
       ]
+    },
+    {
+        id: '2',
+        src: require('../../assets/one-piece/cover.jpg'),
+        date: "29/11/2019",
+        comicName: "One Piece",
+        chapterName: "Cậu ta là Luffy mũ rơm",
+        chapter: "2",
+        pageList:[
+          {
+              page: 1,
+              src: require('../../assets/one-piece/02/1.jpg')
+          },
+          {
+              page: 2,
+              src: require('../../assets/one-piece/02/2.jpg')
+          },
+          {
+              page: 3,
+              src: require('../../assets/one-piece/02/3.jpg')
+          },
+          {
+              page: 4,
+              src: require('../../assets/one-piece/02/4.jpg')
+          },
+          {
+              page: 5,
+              src: require('../../assets/one-piece/02/5.jpg')
+          },
+          
+        ]
+    },
+    {
+        id: '3',
+        date: "1/12/2019",
+        comicName: "One Piece",
+        chapterName: "Thợ săn hải tặc Zoro xuất hiện",
+        src: require('../../assets/one-piece/cover.jpg'),
+        chapter: "3",
+        pageList:[
+          {
+              page: 1,
+              src: require('../../assets/one-piece/03/1.jpg')
+          },
+          {
+              page: 2,
+              src: require('../../assets/one-piece/03/2.jpg')
+          },
+          {
+              page: 3,
+              src: require('../../assets/one-piece/03/3.jpg')
+          },
+          {
+              page: 4,
+              src: require('../../assets/one-piece/03/4.jpg')
+          },
+          {
+              page: 5,
+              src: require('../../assets/one-piece/03/5.jpg')
+          },
+          
+        ]
+    },
+    {
+        id: '4',
+        date: "4/12/2019",
+        comicName: "One Piece",
+        chapterName: "Morgan tay rìu",
+        src: require('../../assets/one-piece/cover.jpg'),
+        chapter: "4",
+        pageList:[
+          {
+              page: 1,
+              src: require('../../assets/one-piece/04/1.jpg')
+          },
+          {
+              page: 2,
+              src: require('../../assets/one-piece/04/2.jpg')
+          },
+          {
+              page: 3,
+              src: require('../../assets/one-piece/04/3.jpg')
+          },
+          {
+              page: 4,
+              src: require('../../assets/one-piece/04/4.jpg')
+          },
+          {
+              page: 5,
+              src: require('../../assets/one-piece/04/5.jpg')
+          },
+          
+        ]
+    },
+    {
+        id: '5',
+        src: require('../../assets/one-piece/cover.jpg'),
+        date: "10/12/2019",
+        comicName: "One Piece",
+        chapterName: "Vua hải tặc và Đại kiếm khách",
+        chapter: "5",
+        pageList:[
+          {
+              page: 1,
+              src: require('../../assets/one-piece/05/1.jpg')
+          },
+          {
+              page: 2,
+              src: require('../../assets/one-piece/05/2.jpg')
+          },
+          {
+              page: 3,
+              src: require('../../assets/one-piece/05/3.jpg')
+          },
+          {
+              page: 4,
+              src: require('../../assets/one-piece/05/4.jpg')
+          },
+          {
+              page: 5,
+              src: require('../../assets/one-piece/05/5.jpg')
+          },
+          
+        ]
+    },
+    {
+        id: '1',
+        date: "20/11/2019",
+        comicName: "Bleach",
+        chapterName: "Thần chết và dâu tây",
+        src: require('../../assets/bleach/cover.jpg'), 
+        chapter: "1",
+        pageList:[
+          {
+              page: 1,
+              src: require('../../assets/bleach/01/1.jpg')
+          },
+          {
+              page: 2,
+              src: require('../../assets/bleach/01/2.jpg')
+          },
+          {
+              page: 3,
+              src: require('../../assets/bleach/01/3.jpg')
+          },
+          {
+              page: 4,
+              src: require('../../assets/bleach/01/4.jpg')
+          },
+          {
+              page: 5,
+              src: require('../../assets/bleach/01/5.jpg')
+          },
+          
+        ]
+    },
+    {
+        id: '1',
+        src: require('../../assets/conan/cover.jpg'), 
+        date: "24/11/2019",
+        comicName: "Thám tử lừng danh Conan",
+        chapterName: "Mở đầu",
+        chapter: "1",
+        pageList:[
+          {
+              page: 1,
+              src: require('../../assets/conan/01/1.jpg')
+          },
+          {
+              page: 2,
+              src: require('../../assets/conan/01/2.jpg')
+          },
+          {
+              page: 3,
+              src: require('../../assets/conan/01/3.jpg')
+          },
+          {
+              page: 4,
+              src: require('../../assets/conan/01/4.jpg')
+          },
+          {
+              page: 5,
+              src: require('../../assets/conan/01/5.jpg')
+          },
+          
+        ]
+    },
+    {
+        id: '1',
+        src: require('../../assets/dai-chua-te/cover.jpg'), 
+        date: "12/12/2019",
+        comicName: "Đại chúa tể",
+        chapterName: "Những vị chúa tể",
+        chapter: "1",
+        pageList:[
+          {
+              page: 1,
+              src: require('../../assets/dai-chua-te/01/1.jpg')
+          },
+          {
+              page: 2,
+              src: require('../../assets/dai-chua-te/01/2.jpg')
+          },
+          {
+              page: 3,
+              src: require('../../assets/dai-chua-te/01/3.jpg')
+          },
+          {
+              page: 4,
+              src: require('../../assets/dai-chua-te/01/4.jpg')
+          },
+          {
+              page: 5,
+              src: require('../../assets/dai-chua-te/01/5.jpg')
+          },
+          
+        ]
+    },
+    {
+        id: '1',
+        date: "12/12/2019",
+        comicName: "Đại chúa tể",
+        src: require('../../assets/dai-chua-te/cover.jpg'), 
+        chapterName: "Những vị chúa tể",
+        chapter: "1",
+        pageList:[
+          {
+              page: 1,
+              src: require('../../assets/dai-chua-te/01/1.jpg')
+          },
+          {
+              page: 2,
+              src: require('../../assets/dai-chua-te/01/2.jpg')
+          },
+          {
+              page: 3,
+              src: require('../../assets/dai-chua-te/01/3.jpg')
+          },
+          {
+              page: 4,
+              src: require('../../assets/dai-chua-te/01/4.jpg')
+          },
+          {
+              page: 5,
+              src: require('../../assets/dai-chua-te/01/5.jpg')
+          },
+          
+        ]
+    },
+    {
+        id: '1',
+        src: require('../../assets/dau-la-dai-luc/cover.jpg'), 
+        date: "12/12/2019",
+        comicName: "Đấu La Đại Lục - Tuyệt thế đường môn",
+        chapterName: "Những vị chúa tể",
+        chapter: "1",
+        pageList:[
+          {
+              page: 1,
+              src: require('../../assets/dau-la-dai-luc/01/1.jpg')
+          },
+          {
+              page: 2,
+              src: require('../../assets/dau-la-dai-luc/01/2.jpg')
+          },
+          {
+              page: 3,
+              src: require('../../assets/dau-la-dai-luc/01/3.jpg')
+          },
+          {
+              page: 4,
+              src: require('../../assets/dau-la-dai-luc/01/4.jpg')
+          },
+          {
+              page: 5,
+              src: require('../../assets/dau-la-dai-luc/01/5.jpg')
+          },
+          
+        ]
+    },
+    {
+        id: '1',
+        date: "12/12/2019",
+        comicName: "Đấu phá thương khung",
+        src: require('../../assets/dau-pha-thuong-khung/cover.jpg'), 
+        chapterName: "Mở đầu",
+        chapter: "1",
+        pageList:[
+          {
+              page: 1,
+              src: require('../../assets/dau-pha-thuong-khung/01/1.jpg')
+          },
+          {
+              page: 2,
+              src: require('../../assets/dau-pha-thuong-khung/01/2.jpg')
+          },
+          {
+              page: 3,
+              src: require('../../assets/dau-pha-thuong-khung/01/3.jpg')
+          },
+          {
+              page: 4,
+              src: require('../../assets/dau-pha-thuong-khung/01/4.jpg')
+          },
+          {
+              page: 5,
+              src: require('../../assets/dau-pha-thuong-khung/01/5.jpg')
+          },
+          
+        ]
+    },
+    {
+        id: '1',
+        src: require('../../assets/Doraemon/cover.jpg'), 
+        date: "11/12/2019",
+        comicName: "Doraemon",
+        chapterName: "Những người bạn đến từ thế giới tương lai",
+        chapter: "1",
+        pageList:[
+          {
+              page: 1,
+              src: require('../../assets/Doraemon/01/1.jpg')
+          },
+          {
+              page: 2,
+              src: require('../../assets/Doraemon/01/2.jpg')
+          },
+          {
+              page: 3,
+              src: require('../../assets/Doraemon/01/3.jpg')
+          },
+          {
+              page: 4,
+              src: require('../../assets/Doraemon/01/4.jpg')
+          },
+          {
+              page: 5,
+              src: require('../../assets/Doraemon/01/5.jpg')
+          },
+          
+        ]
+    },
+    {
+        id: '1',
+        date: "11/12/2019",
+        src: require('../../assets/dragon-ball/cover.jpg'), 
+        comicName: "Dragon Ball",
+        chapterName: "Bulma và Songoku",
+        chapter: "1",
+        pageList:[
+          {
+              page: 1,
+              src: require('../../assets/dragon-ball/01/1.jpg')
+          },
+          {
+              page: 2,
+              src: require('../../assets/dragon-ball/01/2.jpg')
+          },
+          {
+              page: 3,
+              src: require('../../assets/dragon-ball/01/3.jpg')
+          },
+          {
+              page: 4,
+              src: require('../../assets/dragon-ball/01/4.jpg')
+          },
+          {
+              page: 5,
+              src: require('../../assets/dragon-ball/01/5.jpg')
+          },
+          {
+            page: 6,
+            src: require('../../assets/dragon-ball/01/6.jpg')
+        },
+        {
+            page: 7,
+            src: require('../../assets/dragon-ball/01/7.jpg')
+        },
+        {
+            page: 8,
+            src: require('../../assets/dragon-ball/01/8.jpg')
+        },
+        {
+            page: 9,
+            src: require('../../assets/dragon-ball/01/9.jpg')
+        },
+        {
+            page: 10,
+            src: require('../../assets/dragon-ball/01/10.jpg')
+        },
+        {
+            page: 8,
+            src: require('../../assets/dragon-ball/01/8.jpg')
+        },
+        {
+            page: 9,
+            src: require('../../assets/dragon-ball/01/9.jpg')
+        },
+        {
+            page: 10,
+            src: require('../../assets/dragon-ball/01/10.jpg')
+        },{
+            page: 11,
+            src: require('../../assets/dragon-ball/01/11.jpg')
+        },
+        {
+            page: 12,
+            src: require('../../assets/dragon-ball/01/12.jpg')
+        },
+        {
+            page: 13,
+            src: require('../../assets/dragon-ball/01/13.jpg')
+        },
+          
+        ]
+    },
+    {
+        id: '1',
+        src: require('../../assets/naruto/cover.jpg'), 
+        date: "11/12/2019",
+        comicName: "Naruto",
+        chapterName: "Cậu ấy là Naruto",
+        chapter: "1",
+        pageList:[
+          {
+              page: 1,
+              src: require('../../assets/naruto/01/1.jpg')
+          },
+          {
+              page: 2,
+              src: require('../../assets/naruto/01/2.jpg')
+          },
+          {
+              page: 3,
+              src: require('../../assets/naruto/01/3.jpg')
+          },
+          {
+              page: 4,
+              src: require('../../assets/naruto/01/4.jpg')
+          },
+          {
+              page: 5,
+              src: require('../../assets/naruto/01/5.jpg')
+          }
+        ]
+          }, 
+          {
+            id: '1',
+            src: require('../../assets/pokemon/cover.jpg'), 
+            date: "11/12/2019",
+            comicName: "Pokemon Special",
+            chapterName: "Fussing và Fishting",
+            chapter: "1",
+            pageList:[
+              {
+                  page: 1,
+                  src: require('../../assets/pokemon/01/1.jpg')
+              },
+              {
+                  page: 2,
+                  src: require('../../assets/pokemon/01/2.jpg')
+              },
+              {
+                  page: 3,
+                  src: require('../../assets/pokemon/01/3.jpg')
+              },
+              {
+                  page: 4,
+                  src: require('../../assets/pokemon/01/4.jpg')
+              },
+              {
+                  page: 5,
+                  src: require('../../assets/pokemon/01/5.jpg')
+              }
+        ]
     }
 ]
 export {chapterList}
