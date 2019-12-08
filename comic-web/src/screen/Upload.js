@@ -54,8 +54,9 @@ export default function Upload() {
 
   const handleChangeComic= async (e,option)=>{
     const comicName = option? option.comicName : null;
-    if(comicName) {   
-    await setChapterInfo({...chapterInfo, comicName: comicName});
+    const chapter = ListComics.find(element=>element.comicName === comicName);
+    if(comicName && chapter) {   
+    await setChapterInfo({...chapterInfo, comicName: comicName, chapter: chapter.listChapters.length+1});
     await setCompleteCurrentStep(true);
     console.log(chapterInfo.comicName)
   }
@@ -70,7 +71,7 @@ export default function Upload() {
   });
 
   function getSteps() {
-    return ['Select Comic', 'Input all fields', 'Review','Finish'];
+    return ['Chọn bộ truyện', 'Nhập nội dung chương mới', 'Kiểm tra và Đăng'];
   }
 
   const handleChangeThumbnail = (file) =>{
@@ -100,7 +101,14 @@ export default function Upload() {
   useEffect(() => {
     const checkNextStep = completeStep2();
     setCompleteCurrentStep(checkNextStep);
- }, [chapterInfo.files,chapterInfo.thumbnail]);
+ }, [chapterInfo.files,chapterInfo.thumbnail,chapterInfo.chapterName]);
+
+ useEffect(()=>{
+  if(activeStep === 1){
+    const checkNextStep = completeStep2();
+    setCompleteCurrentStep(checkNextStep);
+  }
+ },[activeStep])
 
   const showValidate = () =>{
     
@@ -161,6 +169,7 @@ export default function Upload() {
           multiline
           rows="4"
           defaultValue=""
+          onChange = {(e)=>setChapterInfo({...chapterInfo, sumary: e.target.value})}
           variant="outlined"
         />
       </div>
@@ -170,7 +179,7 @@ export default function Upload() {
         filesLimit={100}
         initialFiles={chapterInfo.files}
         acceptedFiles={['image/jpeg', 'image/png', 'image/bmp']}
-        dropzoneText={'tải lên nội dung truyện'}
+        dropzoneText={'Tải lên nội dung truyện'}
         showFileNamesInPreview={true}
         showFileNames={true}
       />
@@ -208,8 +217,10 @@ export default function Upload() {
     <img className="img-fluid d-block" src={item} alt=""></img>
     )}
   </div>
+
   </section>)
   }
+
   
   function getStepContent(step) {
     switch (step) {
@@ -224,20 +235,18 @@ export default function Upload() {
     }
   }
 
-  const handleNext = () => {
-    setActiveStep(prevActiveStep => prevActiveStep + 1);
+  const handleNext = async() => {
+    await setActiveStep(prevActiveStep => prevActiveStep + 1);
   };
 
   const handleBack = () => {
     setActiveStep(prevActiveStep => prevActiveStep - 1);
   };
 
-  const handleReset = () => {
-    setActiveStep(0);
-  };
 
   return (
     <div className={classes.root} id="upload">
+      <h2 className="text-center pt-3">Đăng chương mới</h2>
       <Stepper activeStep={activeStep} orientation="vertical">
         {steps.map((label, index) => (
           <Step key={label}>
@@ -260,7 +269,7 @@ export default function Upload() {
                     onClick={handleNext}
                     className={classes.button}
                   >
-                    {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
+                    {activeStep === steps.length - 1 ? 'Đăng' : 'Next'}
                   </Button>
                 </div>
               </div>
@@ -270,7 +279,7 @@ export default function Upload() {
       </Stepper>
       {activeStep === steps.length && (
         <Paper square elevation={0} className={classes.resetContainer}>
-          <Typography>Hoàn thành</Typography>
+          <Typography className="alert alert-success">Đăng tải chương mới thành công</Typography>
         </Paper>
       )}
     </div>

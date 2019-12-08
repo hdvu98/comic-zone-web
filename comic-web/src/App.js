@@ -15,6 +15,7 @@ import RouteLayout from './components/router/routerLayout';
 import DashboardLayout from './components/Layout/DashboardLayout';
 import Upload from './screen/Upload';
 import PageLayout from './components/Layout/PageLayout';
+import BlankPage from './screen/BlankPage'
 
 function App() {
 
@@ -33,7 +34,8 @@ function App() {
           </RouteLayout>
           <RouteLayout exact path="/comic/:slug/:id" layout={PageLayout} component={ReadingScreen}>
           </RouteLayout>
-          <RouteLayout exact path="/admin/upload" layout={DashboardLayout} component={Upload}></RouteLayout>
+          <RouteLayout exact path="/admin" layout={DashboardLayout} component={BlankPage}></RouteLayout>
+          <RouteLayout exact path="/admin/upload" activeTab="Upload" layout={DashboardLayout} component={Upload}></RouteLayout>
         </Switch>
         </BrowserRouter>
         

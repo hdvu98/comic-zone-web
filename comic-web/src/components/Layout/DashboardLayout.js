@@ -50,6 +50,7 @@ const useStyles = makeStyles(theme => ({
     }),
   },
   menuButton: {
+    marginLeft: -20,
     marginRight: 36,
   },
   hide: {
@@ -91,6 +92,7 @@ const useStyles = makeStyles(theme => ({
   },
   content: { 
     flexGrow: 1,
+    background: '#ffffff',
     padding: theme.spacing(3),
   },
   colorWhite:{
@@ -102,6 +104,14 @@ const useStyles = makeStyles(theme => ({
   },
   divider:{
       background: '#292929'
+  },
+  active:{
+    background: '#a4ce3a'
+  },
+  button:{
+    '&:hover':{
+      background: '#05a44d'
+    }
   }
 }));
 
@@ -110,6 +120,7 @@ const DashboardLayout=(props)=> {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
   const {username} =props.user? props.user: {username: 'Admin'};
+  const activeTab = props.activeTab? props.activeTab : 'Dashboard';
   const { children } = props;
   var history = useHistory();
 
@@ -205,7 +216,7 @@ const DashboardLayout=(props)=> {
         [<List className={classes.drawerList} key={`KEY${index}`}>
           {menu.list.map((item, index) => (
             <a className="text-decoration-none" href={item.link}>
-            <ListItem button  key={item.text}>
+            <ListItem button  key={item.text} className={`${classes.button}  ${item.text === activeTab &&classes.active}` }>
               <ListItemIcon className={classes.colorWhite}>{item.icon}</ListItemIcon>
               <ListItemText  className={classes.colorWhite} primary={item.text} />
             </ListItem>

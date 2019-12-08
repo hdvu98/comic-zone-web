@@ -1606,7 +1606,8 @@ body {
 }
 
 #upload {
-  background: #fafafa;
+  background: #ffff;
+  color: #121212;
 }
 
 #footer {
