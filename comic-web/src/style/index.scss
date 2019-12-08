@@ -68,3 +68,13 @@ body{
     font-weight: bold;
     padding: 10px 30px 10px 10px ;
 }
+.image-gallery-content.fullscreen  {
+    .image-gallery-slide img {
+      width: auto;
+      max-height: 100vh;
+    }
+  
+    .image-gallery-image {
+      text-align: center;
+    }
+  }

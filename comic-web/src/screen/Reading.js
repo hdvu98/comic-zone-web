@@ -11,6 +11,8 @@ import {ListComics} from '../common/constant/comics';
 import CommentForm from '../components/comment/CommentForm';
 import CommentList from '../components/comment/CommentList';
 import {comments} from '../common/constant/comments';
+import styled from 'styled-components';
+
 const useStyles = makeStyles(theme => ({
     formControl: {
       margin: theme.spacing(1),
@@ -30,10 +32,36 @@ const useStyles = makeStyles(theme => ({
      maxWidth: "100%",
      textAlign: "center"
  } 
+
+ const FullScreenButton = styled.button`
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  z-index: 1;
+  background: url('../../static/icons/fullScreen.png');
+  height: 50px;
+  width: 50px;
+  border: none;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+  transition: all linear 0.1s;
+
+  ${props => props.isFullscreen && `background: url('../../static/icons/closeFullScreen.png');`}
+
+  :hover {
+    transform: scale(0.9);
+  }
+
+  :active {
+    transform: scale(0.85);
+  }`
 const ReadingScreen =(props)=>{
     const classes = useStyles();
-    const {id}=useParams();
-    const item = chapterList[0];
+    const {id, slug}=useParams();
+    const [state,setState] = useState({id: id, slug: slug});
+    const comic = ListComics.find(item=>item.slug=== state.slug);
+    const item = chapterList.find(item=>item.id === state.id && item.comicName === comic.comicName);
     const [modeDisplay,setModeDisplay] = useState(false);
     const [fixed,setFixed]= useState(false);
     const [activePage,setActivePage]=useState(0);
@@ -51,7 +79,7 @@ const ReadingScreen =(props)=>{
 
     const handleChangePageDisplay=(e)=>{
         e.preventDefault();
-        setActivePage(e.target.value);
+        setActivePage(parseInt(e.target.value));
     }
 
     const renderDefault=(pageList)=>{
@@ -68,6 +96,7 @@ const ReadingScreen =(props)=>{
     }
     return items;
 }
+
     const renderSlide=(pageList)=>{
         let images = [];
         pageList.map(item=>{
@@ -84,11 +113,17 @@ const ReadingScreen =(props)=>{
             showThumbnails={false} 
             infinite={false}
             showIndex={false}
+            startIndex={activePage}
             onSlide={()=>{$("html, body").animate({ scrollTop: 0 }, 10);}}
-            preventDefaultTouchmoveEvent={true}></ImageGallery>
+            preventDefaultTouchmoveEvent={true}
+       
+            ></ImageGallery>
             </div>
             <div className={`page-control justify-content-center row m-0 p-0 ${fixed && modeDisplay?'fixed-bottom':''}`}>
                 <div className="d-block align-items-center d-flex">
+                <button disabled={activePage===0} 
+             onClick={()=>setActivePage(activePage-1)}
+            className={`control-btn`}><i class="fas fa-chevron-left"></i></button>
             <FormControl className={classes.formControl}>
                 <NativeSelect
                 onChange={handleChangePageDisplay}
@@ -100,7 +135,11 @@ const ReadingScreen =(props)=>{
                     {renderPageOtion(totalPage)}
                     {/* {ListComics[id].listChapters.map((item)=><option value={item.id}> {`Chương ${item.id}`}</option>)} */}
                 </NativeSelect>
-            </FormControl> / {totalPage}</div>
+            </FormControl> / {totalPage}
+            <button disabled={activePage === totalPage-1} 
+            onClick={()=>setActivePage(activePage+1)} 
+            className="control-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
             </div>
             </div>);
     }
@@ -117,20 +156,25 @@ const ReadingScreen =(props)=>{
         <div className={`page-control row m-0 p-0 ${fixed && !modeDisplay?'fixed-bottom':''}`}>
         <div className="col-4"></div>   
         <div className="col-4 d-flex flex-row justify-content-center">
-            <button className="control-btn"><i class="fas fa-chevron-left"></i></button>
+            <button disabled={item.id==='1'} 
+             onClick={()=>setState({...state,id: (parseInt(item.id)-1).toString()})}
+            className={`control-btn`}><i class="fas fa-arrow-circle-left"></i></button>
             <div>
             <FormControl className={classes.formControl}>
                 <NativeSelect
-                value={id}
+                value={item.id}
                 name="age"
                 className={classes.select}
                 inputProps={{ 'aria-label': 'chapter' }}
+                onChange= {(e)=>setState({...state, id:e.target.value }) }
                 >
-                    {ListComics[id].listChapters.map((item)=><option value={item.id}> {`Chương ${item.id}`}</option>)}
+                    {comic.listChapters.map((item)=><option value={item.id}> {`Chương ${item.id}`}</option>)}
                 </NativeSelect>
             </FormControl>
             </div> 
-            <button className="control-btn"><i class="fas fa-chevron-right"></i></button>
+            <button disabled={item.id === comic.listChapters.length.toString()} 
+            onClick={()=>setState({...state,id: (parseInt(item.id)+1).toString()})} 
+            className="control-btn"><i class="fas fa-arrow-circle-right"></i></button>
         </div>
         <div className="col-4 d-flex flex-row justify-content-end">
             <FormControlLabel

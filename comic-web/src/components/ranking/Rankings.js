@@ -9,11 +9,11 @@ const Ranking=(props)=>{
             <div className="ranking-wrapper">
                 <div className="ranking-body">
                 {list.slice(0,10).map((item,index)=>{
-                    const {src,name,views, rate,author,slug} = item;
+                    const {src,comicName,views, rate,author,slug} = item;
                     return(<RankingCard 
                         thumbnail={src} 
                         position={index+1} 
-                        name={name} 
+                        name={comicName} 
                         views={views} 
                         ratePoint={rate} 
                         author={author}

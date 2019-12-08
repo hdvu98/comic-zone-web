@@ -120,10 +120,10 @@
       max-width: 100%;
     }
   }
-  .image-gallery-right-nav,.image-gallery-left-nav{
+  .image-gallery-left-nav{
     height: 90%;
     width: 50%;
-    &:hover,:focus,:active{
+    &:focus{
       border: none !important;
       outline: none !important;
     }
@@ -131,3 +131,19 @@
       content:''!important;
     }
   }
+  .image-gallery-right-nav{
+    height: 90%;
+    width: 50%;
+    &:focus{
+      border: none !important;
+      outline: none !important;
+    }
+    &::before{
+      content:''!important;
+    }
+  }
+.image-gallery-fullscreen-button{
+  &:focus{
+    outline: none;
+  }
+}
