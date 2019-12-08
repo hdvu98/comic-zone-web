@@ -58,3 +58,13 @@ body{
         background-color: red;
     }
 }
+.times{
+    position: absolute;
+    z-index: 999;
+    top:10px;
+    left: 0;
+    background: #ee5253;
+    color: white;
+    font-weight: bold;
+    padding: 10px 30px 10px 10px ;
+}

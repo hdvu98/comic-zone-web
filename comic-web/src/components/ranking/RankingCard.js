@@ -2,7 +2,7 @@ import React from 'react';
 import Rating from 'react-rating';
 
 const RankingCard = (props)=>{
-    const {thumbnail,position,name,views, ratePoint,author} = props;
+    const {thumbnail,position,name,views, ratePoint,author, slug} = props;
     let postStr=null;
 
     switch(position){
@@ -24,8 +24,8 @@ const RankingCard = (props)=>{
 
     return (
         <div className="ranking-card">
+            <a className="text-decoration-none ranking-link" href={`/comic/${slug}`}>
             <div className="content d-flex flex-row flex-nowrap align-items-center">
-         
                 <div className="thumbnail">
                     <img className="thumbnail-fluid" src={thumbnail} alt={name}></img>
                 </div>
@@ -48,6 +48,7 @@ const RankingCard = (props)=>{
                 </div>
                 </div>
             </div>
+            </a>
         </div>
     );
 

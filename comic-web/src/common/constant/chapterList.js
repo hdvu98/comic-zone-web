@@ -307,7 +307,7 @@ const chapterList =[
     {
         id: '5',
         src: require('../../assets/one-piece/cover.jpg'),
-        date: "10/12/2019",
+        date: "8/12/2019",
         comicName: "One Piece",
         chapterName: "Vua hải tặc và Đại kiếm khách",
         chapter: "5",
@@ -338,7 +338,7 @@ const chapterList =[
     {
         id: '1',
         date: "20/11/2019",
-        comicName: "Bleach",
+        comicName: "Bleach - Sứ mạng thần chết",
         chapterName: "Thần chết và dâu tây",
         src: require('../../assets/bleach/cover.jpg'), 
         chapter: "1",
@@ -370,7 +370,7 @@ const chapterList =[
         id: '1',
         src: require('../../assets/conan/cover.jpg'), 
         date: "24/11/2019",
-        comicName: "Thám tử lừng danh Conan",
+        comicName: "Thám Tử Lừng Danh Conan",
         chapterName: "Mở đầu",
         chapter: "1",
         pageList:[
@@ -399,38 +399,7 @@ const chapterList =[
     },
     {
         id: '1',
-        src: require('../../assets/dai-chua-te/cover.jpg'), 
-        date: "12/12/2019",
-        comicName: "Đại chúa tể",
-        chapterName: "Những vị chúa tể",
-        chapter: "1",
-        pageList:[
-          {
-              page: 1,
-              src: require('../../assets/dai-chua-te/01/1.jpg')
-          },
-          {
-              page: 2,
-              src: require('../../assets/dai-chua-te/01/2.jpg')
-          },
-          {
-              page: 3,
-              src: require('../../assets/dai-chua-te/01/3.jpg')
-          },
-          {
-              page: 4,
-              src: require('../../assets/dai-chua-te/01/4.jpg')
-          },
-          {
-              page: 5,
-              src: require('../../assets/dai-chua-te/01/5.jpg')
-          },
-          
-        ]
-    },
-    {
-        id: '1',
-        date: "12/12/2019",
+        date: "9/12/2019",
         comicName: "Đại chúa tể",
         src: require('../../assets/dai-chua-te/cover.jpg'), 
         chapterName: "Những vị chúa tể",
@@ -462,7 +431,7 @@ const chapterList =[
     {
         id: '1',
         src: require('../../assets/dau-la-dai-luc/cover.jpg'), 
-        date: "12/12/2019",
+        date: "7/12/2019",
         comicName: "Đấu La Đại Lục - Tuyệt thế đường môn",
         chapterName: "Những vị chúa tể",
         chapter: "1",
@@ -492,8 +461,8 @@ const chapterList =[
     },
     {
         id: '1',
-        date: "12/12/2019",
-        comicName: "Đấu phá thương khung",
+        date: "9/12/2019",
+        comicName: "Đấu Phá Thương Khung",
         src: require('../../assets/dau-pha-thuong-khung/cover.jpg'), 
         chapterName: "Mở đầu",
         chapter: "1",
@@ -524,7 +493,7 @@ const chapterList =[
     {
         id: '1',
         src: require('../../assets/Doraemon/cover.jpg'), 
-        date: "11/12/2019",
+        date: "8/12/2019",
         comicName: "Doraemon",
         chapterName: "Những người bạn đến từ thế giới tương lai",
         chapter: "1",
@@ -554,7 +523,7 @@ const chapterList =[
     },
     {
         id: '1',
-        date: "11/12/2019",
+        date: "9/12/2019",
         src: require('../../assets/dragon-ball/cover.jpg'), 
         comicName: "Dragon Ball",
         chapterName: "Bulma và Songoku",
@@ -629,7 +598,7 @@ const chapterList =[
     {
         id: '1',
         src: require('../../assets/naruto/cover.jpg'), 
-        date: "11/12/2019",
+        date: "8/12/2019",
         comicName: "Naruto",
         chapterName: "Cậu ấy là Naruto",
         chapter: "1",
@@ -659,7 +628,7 @@ const chapterList =[
           {
             id: '1',
             src: require('../../assets/pokemon/cover.jpg'), 
-            date: "11/12/2019",
+            date: "6/12/2019",
             comicName: "Pokemon Special",
             chapterName: "Fussing và Fishting",
             chapter: "1",

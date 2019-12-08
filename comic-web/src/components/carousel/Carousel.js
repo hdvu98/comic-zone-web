@@ -58,6 +58,7 @@ function CarouselSection() {
                       onExited={onExited}
                       key={key}
                     >
+                      <a href={`${item.slug}`}>
                       <div className="cover">
                       <img src={item.src} alt={item.altText} />
                       <div className="overlay"></div>
@@ -67,13 +68,14 @@ function CarouselSection() {
                         <div className="carousel-caption flex-column d-flex align-items-start">
                          
                           <div className="d-flex flex-row justify-content-start align-items-center">
-                            <a className="comic-name" href="/">{item.comicName}</a>
+                            <a className="comic-name" href={`${item.comicSlug}`}>{item.comicName}</a>
                             <span className="chapter">Chương {item.chapter}</span>
                           </div>
                          <div className="chapter-name">{item.chapterName}</div>
                          <div className="date">{item.date}</div>
                         </div>
                       </div>
+                      </a>
                     </CarouselItem>
                   );
                 })}

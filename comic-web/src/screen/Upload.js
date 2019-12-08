@@ -133,7 +133,7 @@ export default function Upload() {
         value ={{comicName: chapterInfo.comicName}}
         style={{ width: '100%' }}
         renderInput={params => (
-          <TextField {...params} label="Comic name" variant="outlined" fullWidth />
+          <TextField {...params} label="Tên bộ truyện" variant="outlined" fullWidth />
         )}
       />);
   }
@@ -260,7 +260,7 @@ export default function Upload() {
                     onClick={handleBack}
                     className={classes.button}
                   >
-                    Back
+                    Quay lại
                   </Button>
                   <Button
                     disabled= { !completeCurrentStep}
@@ -269,7 +269,7 @@ export default function Upload() {
                     onClick={handleNext}
                     className={classes.button}
                   >
-                    {activeStep === steps.length - 1 ? 'Đăng' : 'Next'}
+                    {activeStep === steps.length - 1 ? 'Đăng' : 'Kế tiếp'}
                   </Button>
                 </div>
               </div>

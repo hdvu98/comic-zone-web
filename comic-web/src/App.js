@@ -35,7 +35,7 @@ function App() {
           <RouteLayout exact path="/comic/:slug/:id" layout={PageLayout} component={ReadingScreen}>
           </RouteLayout>
           <RouteLayout exact path="/admin" layout={DashboardLayout} component={BlankPage}></RouteLayout>
-          <RouteLayout exact path="/admin/upload" activeTab="Upload" layout={DashboardLayout} component={Upload}></RouteLayout>
+          <RouteLayout exact path="/admin/upload" activeTab="Đăng tải" layout={DashboardLayout} component={Upload}></RouteLayout>
         </Switch>
         </BrowserRouter>
         

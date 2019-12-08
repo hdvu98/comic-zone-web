@@ -147,7 +147,6 @@ const ListComics = [
        Suneo (Xêkô) hoặc Jaian (Chaien) lại lấy trộm những bảo bối và sử dụng chúng không đúng mục đích. Tuy nhiên thường thì ở cuối mỗi câu chuyện, những ai sử dụng sai mục đích bảo bối sẽ phải 
        chịu hậu quả do mình gây ra, và người đọc sẽ rút ra được bài học từ đó`
     },
-    ,
     {
         src: require('../../assets/dragon-ball/cover.jpg'), 
         comicName:'Dragon Ball', 

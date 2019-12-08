@@ -6,6 +6,8 @@ const trending = [
       comicName: "One Piece",
       chapterName: "Vua hải tặc và Đại kiếm khách",
       chapter: "5",
+      slug: '/comic/one-piece-01/5',
+      comicSlug: '/comic/one-piece-01'
     },
     {
       src: require('../../assets/bleach/cover.jpg'),
@@ -14,6 +16,8 @@ const trending = [
       comicName: "Bleach",
       chapter: "1",
       chapterName: "Thần chết và dâu tây",
+      slug: '/comic/bleach-02/1',
+      comicSlug: '/comic/bleach-02'
     },
     {
       src:  require('../../assets/conan/cover.jpg'),
@@ -22,6 +26,8 @@ const trending = [
       chapterName: "Mở đầu",
       comicName: "Thám tử lừng danh Conan",
       chapter: "1",
+      slug: '/comic/conan-03/1',
+      comicSlug: '/comic/conan-03'
     },
     {
       src: require('../../assets/dau-pha-thuong-khung/cover.jpg'),
@@ -30,6 +36,8 @@ const trending = [
       chapterName: "Mở đầu",
       comicName: "Đấu phá thương khung",
       chapter: "1",
+      slug: '/comic/dau-la-dai-luc-05/1',
+      comicSlug: '/comic/dau-la-dai-luc-05',
     },
     {
       src: require('../../assets/pokemon/cover.jpg'),
@@ -38,6 +46,8 @@ const trending = [
       chapterName: "Fussing và Fishting",
       comicName: "Pokemon Special",
       chapter: "1",
+      slug: '/comic/pokemon-special-10/1',
+      comicSlug: '/comic/pokemon-special-10',
     }
   ];
 

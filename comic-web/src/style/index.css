@@ -62,7 +62,7 @@
 }
 .carousel .carousel-caption .chapter-name {
   text-transform: uppercase;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: bold;
   white-space: 0.2em;
   text-align: start;
@@ -547,6 +547,13 @@
   background: none;
   border: none;
   font-size: 2rem;
+}
+
+.ranking-link {
+  color: white;
+}
+.ranking-link:hover {
+  color: white;
 }
 
 #comic-page .page-header {
@@ -1640,6 +1647,17 @@ body {
 }
 .love-btn:hover {
   background-color: red;
+}
+
+.times {
+  position: absolute;
+  z-index: 999;
+  top: 10px;
+  left: 0;
+  background: #ee5253;
+  color: white;
+  font-weight: bold;
+  padding: 10px 30px 10px 10px;
 }
 
 /*# sourceMappingURL=index.css.map */

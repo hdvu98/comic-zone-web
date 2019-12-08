@@ -13,26 +13,26 @@ import SpeakerNotesIcon from '@material-ui/icons/SpeakerNotes';
 import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
 const DashboardMenu = [
    { list:[
-        {text:'Dashboard',icon:<DashboardIcon/>,link:'/admin/'},
-        {text:'Schedule ',icon:<ScheduleIcon/>,link: '/admin/create-admin'},
-        {text:'Statistics',icon:<EqualizerIcon/>,link: '/admin/statistics'},
+        {text:'Bảng điều khiển',icon:<DashboardIcon/>,link:'/admin/'},
+        {text:'Lịch phát hành',icon:<ScheduleIcon/>,link: '/admin/create-admin'},
+        {text:'Thống kê',icon:<EqualizerIcon/>,link: '/admin/statistics'},
     ]},
    { list:
     [
-        {text:'Navigation Bar',icon:<ListIcon/>,link: '/admin/navigation-bar'},
-        {text:'Notifications',icon:<AddAlertIcon/>,link: '/admin/alert'},
+        {text:'Tùy chọn Menu',icon:<ListIcon/>,link: '/admin/navigation-bar'},
+        {text:'Thông báo',icon:<AddAlertIcon/>,link: '/admin/alert'},
     ]},
     {list:
         [
-        {text:'Authors',icon:<PermContactCalendarIcon/>,link: '/admin/authors'},
-        {text:'Categories',icon:<CategoryIcon/>,link: '/admin/categories'},
-        {text:'Comics',icon:<ImportContactsIcon/>,link: '/admin/comics'},
-        {text:'Upload',icon:<BackupIcon/>,link: '/admin/upload'},
+        {text:'Tác giả',icon:<PermContactCalendarIcon/>,link: '/admin/authors'},
+        {text:'Thể loại',icon:<CategoryIcon/>,link: '/admin/categories'},
+        {text:'Bộ truyện',icon:<ImportContactsIcon/>,link: '/admin/comics'},
+        {text:'Đăng tải',icon:<BackupIcon/>,link: '/admin/upload'},
     ]},
     {list:[
-        {text: 'Blocked List', icon: <BlockIcon/>, link: '/adminblocked-list'}, 
-        {text: 'Comments', icon: <SpeakerNotesIcon/>, link: '/admin/comments'}, 
-        {text:'Users', icon: <PeopleAltIcon/>,link: '/admin/users'},
+        {text: 'Chặn', icon: <BlockIcon/>, link: '/adminblocked-list'}, 
+        {text: 'Bình luận', icon: <SpeakerNotesIcon/>, link: '/admin/comments'}, 
+        {text:'Người dùng', icon: <PeopleAltIcon/>,link: '/admin/users'},
     ]}
 ]
 

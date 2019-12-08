@@ -120,7 +120,7 @@ const DashboardLayout=(props)=> {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
   const {username} =props.user? props.user: {username: 'Admin'};
-  const activeTab = props.activeTab? props.activeTab : 'Dashboard';
+  const activeTab = props.activeTab? props.activeTab : 'Bảng điều khiển';
   const { children } = props;
   var history = useHistory();
 
@@ -148,9 +148,9 @@ const DashboardLayout=(props)=> {
            </Dropdown.Toggle>
        
            <Dropdown.Menu>
-               <Dropdown.Item href="#=">Account Profile</Dropdown.Item>
-               <Dropdown.Item href="#">Change Password</Dropdown.Item>
-               <Dropdown.Item href="#" onClick={handleLogout}>Log Out</Dropdown.Item>
+               <Dropdown.Item href="#=">Thông tin cá nhân</Dropdown.Item>
+               <Dropdown.Item href="#">Đổi mật khẩu</Dropdown.Item>
+               <Dropdown.Item href="#" onClick={handleLogout}>Đăng xuất</Dropdown.Item>
            </Dropdown.Menu>
        </Dropdown>
         </div>
@@ -177,12 +177,16 @@ const DashboardLayout=(props)=> {
             })}
           >
             <MenuIcon />
-          </IconButton>
+          </IconButton >
+         
           <div className="w-100 align-items-center d-flex flex-row justify-content-between">
           <div className="brand d-flex align-items-center">
+          <a href="/">
           <img className="logo d-inline-block" src={logo} alt="Comic Zone"></img>
+          </a>
           <span className="brand-text">Comic Zone</span>
           </div>
+
           {
             renderProfile()
             }

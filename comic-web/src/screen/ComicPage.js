@@ -6,9 +6,9 @@ import {ListComics} from '../common/constant/comics';
 import {numberWithCommas} from '../common/function/displayNumber';
 import { categories } from '../common/constant/categories';
 
-const ComicPage =(props)=>{
-    let {slug} = useParams();
-    const item = ListComics.find(element=>element.slug === slug);
+const ComicPage = (props)=>{
+    let {slug} =  useParams();
+    const item =  ListComics.find(element=>element && element.slug === slug);
     const {src, comicName, author,total, current,rate,views,favorites, category,listChapters,desc} = item;
     const displayViews = numberWithCommas(views);
     const [isFavorite,setIsFavorite] = useState(false);
@@ -26,7 +26,8 @@ const ComicPage =(props)=>{
 
     const renderListChapter=(listChapters)=>{
         return listChapters.map((item,index)=><div className="col-4 col-sm-3 col-md-2 m-1 p-0">
-            <a className=" chapter-link d-flex align-items-center justify-content-center text-decoration-none text-white"href={`comic/${slug}/${item.id}`}>Chương {item.id}</a>
+            <a className=" chapter-link d-flex align-items-center justify-content-center text-decoration-none text-white"
+            href={`/comic/${slug}/${item.id}`}>Chương {item.id}</a>
             </div>)
     }
 
