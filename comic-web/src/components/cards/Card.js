@@ -10,7 +10,7 @@ function Card(props){
                     <img className="card-thumbnail" src={src} alt=""></img>
                 </div>
                 <div className="card-content">
-                    <div className="name">{comicName}</div>
+                    <div className="name"><b>{comicName}</b></div>
                     <div className="chapter">Chương {chapter}</div>
                 </div>
             </div>

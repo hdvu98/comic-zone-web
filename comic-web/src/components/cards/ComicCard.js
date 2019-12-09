@@ -15,7 +15,7 @@ function ComicCard(props){
                     <img className="card-thumbnail" src={src} alt=""></img>
                 </div>
                 <div className="card-content">
-                    <div className="name">{comicName}</div>
+                    <div className="name"><b>{comicName}</b></div>
                     <div className="numberOfChapters"> {current}{' '}/{' '}{total==='---'? 'Đang phát hành': total}</div>
                 </div>
             </div>
