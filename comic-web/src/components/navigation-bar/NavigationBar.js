@@ -23,7 +23,7 @@ const Example = (props) => {
     <Navbar bg="dark" id="header" expand="lg" fixed="top" variant="dark">
     <Navbar.Brand href="/"><img className="logo" alt="" src={logo}></img></Navbar.Brand>
     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-    <Navbar.Collapse id="responsive-navbar-nav">
+    <Navbar.Collapse id="responsive-navbar-nav bg-dark" >
     <Nav className="mr-auto">
         {
             MENU.map((item,index)=>{
@@ -38,6 +38,7 @@ const Example = (props) => {
         }
     </Nav>
     <IntegrationDownshift/>
+    <div>
     <Dropdown alignRight>
   <Dropdown.Toggle variant="dark" id="dropdown-basic">
   <AccountCircle />{username}
@@ -51,6 +52,7 @@ const Example = (props) => {
     <Dropdown.Item href="#">Đăng xuất</Dropdown.Item>
   </Dropdown.Menu>
 </Dropdown>
+</div>
   
     </Navbar.Collapse>
   </Navbar>

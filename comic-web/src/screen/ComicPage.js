@@ -64,14 +64,20 @@ const ComicPage = (props)=>{
             </div>
             </div>
             <div className="list-header">Thông tin cơ bản</div>
+            <br/>
             <div><b>Tên truyện : </b>{comicName}</div>
+            <br/>
             <div><b>Tác giả : </b>{author}</div>
+            <br/>
             <div><b>Số lượng chương: </b>{total==='---'?'Đang phát hành': total}</div>
+            <br/>
             <div><b>Chương đã phát: </b>{current}</div>
+            <br/>
             <div><b>Thể loại: </b>{
                renderCategory(category)
                 }
             </div>
+            <br/>
             <div><b>Tóm tắt:</b></div>
             <div>{desc}</div>
             <div className="list-header">Đã phát hành</div>

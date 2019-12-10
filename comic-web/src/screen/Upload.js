@@ -209,9 +209,12 @@ export default function Upload() {
     return (
     <section>
       <h2 className="text-center pt-3">{chapterInfo.comicName}</h2>
+      <br/>
       <div><b>Chương </b> {chapterInfo.chapter} - {chapterInfo.chapterName}</div>
+      <br/>
       <div><b>Nội dung chính: </b></div>
       <span>{chapterInfo.sumary}</span>
+      <br/>
       <div className="reading-area d-flex flex-column align-items-center bg-white">
     {chapterInfo.files.map(item=>
     <img className="img-fluid d-block" src={item} alt=""></img>

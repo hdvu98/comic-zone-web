@@ -66,6 +66,7 @@
   font-weight: bold;
   white-space: 0.2em;
   text-align: start;
+  padding: 1rem 0;
 }
 .carousel .carousel-caption .chapter {
   display: block;
@@ -212,13 +213,13 @@
 
 .btn-see-more {
   text-decoration: none;
-  color: white;
+  color: #a4ce3a;
   font-weight: bold;
   margin: 1rem 0;
 }
 .btn-see-more:hover {
   text-decoration: none;
-  color: #a4ce3a;
+  color: #05a44d;
 }
 
 .break-line {
@@ -1683,6 +1684,12 @@ body {
 }
 .image-gallery-content.fullscreen .image-gallery-image {
   text-align: center;
+}
+
+.navbar-collapse.collapse.show {
+  background: #121212;
+  padding: 1rem;
+  width: 100%;
 }
 
 /*# sourceMappingURL=index.css.map */

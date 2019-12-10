@@ -1,6 +1,6 @@
 const trending = [
     {
-      src: require('../../assets/one-piece/cover.jpg'),
+      src: require('../../assets/one-piece/banner.jpg'),
       altText: "One Pice - chapter 5",
       date: "10/12/2019",
       comicName: "One Piece",
@@ -10,7 +10,7 @@ const trending = [
       comicSlug: '/comic/one-piece-01'
     },
     {
-      src: require('../../assets/bleach/cover.jpg'),
+      src: require('../../assets/bleach/banner.jpg'),
       altText: "Bleach - chapter 1",
       date: "20/11/2019",
       comicName: "Bleach",
@@ -20,7 +20,7 @@ const trending = [
       comicSlug: '/comic/bleach-02'
     },
     {
-      src:  require('../../assets/conan/cover.jpg'),
+      src:  require('../../assets/conan/banner.jpg'),
       altText: "conan - chapter 1",
       date: "24/11/2019",
       chapterName: "Mở đầu",
@@ -30,7 +30,7 @@ const trending = [
       comicSlug: '/comic/conan-03'
     },
     {
-      src: require('../../assets/dau-pha-thuong-khung/cover.jpg'),
+      src: require('../../assets/dau-pha-thuong-khung/banner.jpg'),
       altText: "Đấu phá thương khung - chapter 1",
       date: "25/11/2019",
       chapterName: "Mở đầu",
@@ -40,7 +40,7 @@ const trending = [
       comicSlug: '/comic/dau-la-dai-luc-05',
     },
     {
-      src: require('../../assets/pokemon/cover.jpg'),
+      src: require('../../assets/pokemon/banner.jpg'),
       altText: "Pokemon - chương 1",
       date: "12/12/2019",
       chapterName: "Fussing và Fishting",
