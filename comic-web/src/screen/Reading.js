@@ -22,10 +22,12 @@ const useStyles = makeStyles(theme => ({
     },
     select: {
       color:'#000  !important',
+      padding: '10px'
+     
     },
     root:{
         color: '#000'
-    }
+    },
   }));
 
  const imageDisplay={
@@ -129,7 +131,7 @@ const ReadingScreen =(props)=>{
                 onChange={handleChangePageDisplay}
                 value={activePage}
                 name="age"
-                className={classes.select}
+                classes={classes}
                 inputProps={{ 'aria-label': 'chapter' }}
                 >
                     {renderPageOtion(totalPage)}
@@ -163,8 +165,8 @@ const ReadingScreen =(props)=>{
             <FormControl className={classes.formControl}>
                 <NativeSelect
                 value={item.id}
-                name="age"
-                className={classes.select}
+                name="chapter"
+                classes={classes}
                 inputProps={{ 'aria-label': 'chapter' }}
                 onChange= {(e)=>setState({...state, id:e.target.value }) }
                 >
