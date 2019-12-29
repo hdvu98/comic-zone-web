@@ -19,8 +19,8 @@
         height: 100%;
     }
     .thumbnail{
-        width: 5.5rem;
-        height: 5rem;
+        width: 5rem;
+        height: 4.3rem;
         overflow: hidden;
         border-radius: 1rem;
         border: 1px solid #292929;
@@ -99,6 +99,9 @@
   background: none;
   border: none;
   font-size: 2rem;
+  &:not(.disabled):hover {
+    color: #a4ce3a;
+  }   
 }
 .ranking-link{
   color: white;

@@ -143,7 +143,35 @@
     }
   }
 .image-gallery-fullscreen-button{
+  background: #6b696978 !important;
   &:focus{
     outline: none;
   }
 }
+
+// .image-gallery {
+//   width: 100%;
+//   height: 100%;
+//   .image-gallery-content{
+//     width: 100%;
+//     height: 100%;
+//     .image-gallery-slide-wrapper{
+//       width: 100%;
+//       height: 100%;
+//       .image-gallery-swipe{
+//         width: 100%;
+//         height: 100%;
+//         .image-gallery-slides{
+//           width: 100%;
+//           height: 100%;
+//           .image-gallery-slide{
+//             width: 100%;
+//             height: 100%;
+//             .image-gallery-image{
+//               width: 100%;
+//               height: 100%;
+//               }
+//             }
+//           }
+//         }}}
+// }

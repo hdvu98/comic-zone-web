@@ -246,6 +246,14 @@ export default function Upload() {
     setActiveStep(prevActiveStep => prevActiveStep - 1);
   };
 
+  const handleReset= (e) =>{
+    e.preventDefault();
+    setChapterInfo(initialChapterInfo);
+    setActiveStep(0);
+    setCompleteCurrentStep(false);
+    setValidate({chapterNameValidate:true});
+  }
+
 
   return (
     <div className={classes.root} id="upload">
@@ -281,8 +289,16 @@ export default function Upload() {
         ))}
       </Stepper>
       {activeStep === steps.length && (
-        <Paper square elevation={0} className={classes.resetContainer}>
+        <Paper square elevation={0}  className={classes.resetContainer}>
           <Typography className="alert alert-success">Đăng tải chương mới thành công</Typography>
+          <Button
+                    variant="contained"
+                    color="primary"
+                    onClick={handleReset}
+                    className={classes.button}
+                  >
+                   {"Đăng mới"}
+                  </Button>
         </Paper>
       )}
     </div>

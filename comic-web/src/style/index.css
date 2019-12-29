@@ -469,8 +469,8 @@
   height: 100%;
 }
 .ranking-card .thumbnail {
-  width: 5.5rem;
-  height: 5rem;
+  width: 5rem;
+  height: 4.3rem;
   overflow: hidden;
   border-radius: 1rem;
   border: 1px solid #292929;
@@ -549,6 +549,9 @@
   background: none;
   border: none;
   font-size: 2rem;
+}
+.control-btn:not(.disabled):hover {
+  color: #a4ce3a;
 }
 
 .ranking-link {
@@ -812,6 +815,9 @@
   content: "" !important;
 }
 
+.image-gallery-fullscreen-button {
+  background: #6b696978 !important;
+}
 .image-gallery-fullscreen-button:focus {
   outline: none;
 }

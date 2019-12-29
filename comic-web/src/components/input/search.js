@@ -71,12 +71,12 @@ function renderInputComponent(inputProps) {
 function renderSuggestion(suggestion, { query, isHighlighted }) {
   const matches = match(suggestion.label, query);
   const parts = parse(suggestion.label, matches);
-
   return (
     <MenuItem selected={isHighlighted}  component="div">
       <div>
         {parts.map(part => (
-          <span key={part.text} style={{ fontWeight: part.highlight ? 500 : 400 }}>
+          <span key={part.text} style={{ fontWeight: part.highlight ? 500 : 400 }}
+          >
             {part.text}
           </span>
         ))}
@@ -203,7 +203,9 @@ function IntegrationAutosuggest() {
     });
   };
 
+
   const handleClickSearch =(e)=>{
+    console.log(e);
     e.preventDefault();
     if(state.single.length>0){
       const search = state.single;
@@ -243,7 +245,7 @@ function IntegrationAutosuggest() {
             placeholder: 'Nhập tên truyện, tác giả để tìm kiếm...',
             value: state.single,
             onChange: handleChange('single'),
-            onKeyPress: (e)=>handleKeyPress(e)
+            onKeyDown: handleKeyPress,
           }}
           theme={{
             container: classes.container,
@@ -251,11 +253,12 @@ function IntegrationAutosuggest() {
             suggestionsList: classes.suggestionsList,
             suggestion: classes.suggestion,
           }}
-          renderSuggestionsContainer={options => (
-            <Paper {...options.containerProps} square>
+          renderSuggestionsContainer={options => {
+            return (
+            <Paper {...options.containerProps} square >
               {options.children}
             </Paper>
-          )}
+          )}}
           /> 
           <div onClick={handleClickSearch} className={`d-flex align-items-center ${classes.searchIcon}`}>
             <SearchIcon />

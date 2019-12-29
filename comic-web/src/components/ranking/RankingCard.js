@@ -44,7 +44,7 @@ const RankingCard = (props)=>{
                         initialRating={ratePoint} readonly/>
                         <span className="point">{ratePoint}</span>
                 </div>
-                <div className="d-md-block d-none">{views}</div>
+                <div className="d-md-block d-none"><i className="fas fa-eye mr-3">{' '}</i>{views}</div>
                 </div>
                 </div>
             </div>

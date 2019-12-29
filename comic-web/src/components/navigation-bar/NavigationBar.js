@@ -22,8 +22,24 @@ const Example = (props) => {
   return (
     <Navbar bg="dark" id="header" expand="lg" fixed="top" variant="dark">
     <Navbar.Brand href="/"><img className="logo" alt="" src={logo}></img></Navbar.Brand>
+    <div className="d-block d-lg-none">
+    <IntegrationDownshift/>
+    </div>
     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
     <Navbar.Collapse id="responsive-navbar-nav bg-dark" >
+    <Dropdown alignLeft>
+    <Dropdown.Toggle variant="dark" id="dropdown-basic" className="d-block d-lg-none">
+    <AccountCircle />{username}
+    </Dropdown.Toggle>
+
+    <Dropdown.Menu >
+      <Dropdown.Item href="#=">Cập nhật thông tin</Dropdown.Item>
+      <Dropdown.Item href="#">Đổi mật khẩu</Dropdown.Item>
+      <Dropdown.Item href="#">Lịch sử đọc</Dropdown.Item>
+      <Dropdown.Item href="#">Yêu thích</Dropdown.Item>
+      <Dropdown.Item href="#">Đăng xuất</Dropdown.Item>
+    </Dropdown.Menu>
+  </Dropdown>
     <Nav className="mr-auto">
         {
             MENU.map((item,index)=>{
@@ -37,14 +53,16 @@ const Example = (props) => {
             })
         }
     </Nav>
+    <div className="d-none d-lg-block">
     <IntegrationDownshift/>
+    </div>
     <div>
     <Dropdown alignRight>
-  <Dropdown.Toggle variant="dark" id="dropdown-basic">
+  <Dropdown.Toggle variant="dark" id="dropdown-basic" className="d-none d-lg-block">
   <AccountCircle />{username}
   </Dropdown.Toggle>
 
-  <Dropdown.Menu>
+  <Dropdown.Menu >
     <Dropdown.Item href="#=">Cập nhật thông tin</Dropdown.Item>
     <Dropdown.Item href="#">Đổi mật khẩu</Dropdown.Item>
     <Dropdown.Item href="#">Lịch sử đọc</Dropdown.Item>

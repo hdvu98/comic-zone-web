@@ -23,7 +23,7 @@ const Footer =(props)=>{
                 </span>
             </a>
         </div>
-                <div className="email">hdvu98@gmail.com</div>
+                <div className="email"><i className="fas fa-envelope"></i> contact@comiczone.com</div>
             </div>
         </section>
     );
