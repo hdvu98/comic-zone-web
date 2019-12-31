@@ -16,7 +16,7 @@ function Home(){
         <section id="home">
             <Carousel/>
             <Container>
-                <CountdownList title="SẮP PHÁT PHÁT HÀNH" listItems={countDownList} />
+                <CountdownList title="SẮP PHÁT HÀNH" listItems={countDownList} />
                 <Ranking list={ListComics}></Ranking>
                 <List title="MỚI CẬP NHẬT" listItems={chapterList}></List>
                 <CategoryList title="Thể loại" listItems={categories}></CategoryList>
